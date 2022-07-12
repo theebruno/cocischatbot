@@ -81,7 +81,6 @@ sniffio==1.2.0
 sortedcontainers==2.4.0
 soupsieve==2.3.2.post1
 systemd-python==234
-trio==0.21.0
 ufw==0.36
 unattended-upgrades==0.1
 undetected-chromedriver==3.1.5.post4
