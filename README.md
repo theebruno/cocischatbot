@@ -3,3 +3,11 @@ A chatbot or chatterbot is a software application used to conduct an on-line cha
 
 
 Blog live at https://bse2216.wordpress.com/
+
+all changes to the flask based app engine are deployed automatically
+
+## to run locally
+
+1. pip install requirements.txt
+
+2. after that run the app.py file
