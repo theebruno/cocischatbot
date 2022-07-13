@@ -1,50 +1,65 @@
-from flask import Flask, request, jsonify
+from chatterbot import ChatBot
+from chatterbot.trainers import ListTrainer
+from requests import get
+from bs4 import BeautifulSoup
+import os
+from flask import Flask, render_template, request, jsonify
+
 app = Flask(__name__)
 
-@app.route('/getmsg/', methods=['GET'])
-def respond():
-    # Retrieve the name from url parameter
-    name = request.args.get("query", None)
+bot= ChatBot('ChatBot')
 
-    # For debugging
-    print(f"got name {name}")
+trainer = ListTrainer(bot)
 
-    response = {}
+for file in os.listdir('data/'):
 
-    # Check if user sent a name at all
-    if not name:
-        response["ERROR"] = "no name found, please send a name."
-    # Check if the user entered a number not a name
-    elif str(name).isdigit():
-        response["ERROR"] = "name can't be numeric."
-    # Now the user entered a valid name
-    else:
-        det = f"Welcome {name} to our awesome platform!!"
+    chats = open('data/' + file, 'r').readlines()
 
-    # Return the response in json format
-    # return jsonify(response)
-    return jsonify({"response" : det})
+    trainer.train(chats)
 
-@app.route('/post/', methods=['POST'])
-def post_something():
-    param = request.form.get('name')
-    print(param)
-    # You can add the test cases you made in the previous function, but in our case here you are just testing the POST functionality
-    if param:
-        return jsonify({
-            "Message": f"Welcome {name} to our awesome platform!!",
-            # Add this option to distinct the POST request
-            "METHOD" : "POST"
-        })
-    else:
-        return jsonify({
-            "ERROR": "no name found, please send a name."
-        })
+@app.route("/")
+def hello():
+    return render_template('chat.html')
 
-# A welcome message to test our server
-@app.route('/')
-def index():
-    return "<h1>Welcome to our server !!</h1>"
+@app.route("/ask/", methods=['GET'])
+def ask():
+
+    message = request.args.get("query", None)
+
+    bot_response = bot.get_response(message)
+
+    while True:
+
+        if bot_response.confidence > 0.1:
+
+            bot_response = str(bot_response)      
+            print(bot_response)
+            return jsonify({'status':'OK','answer':bot_response})
+ 
+        elif message == ("bye"):
+
+            bot_response='Hope to see you soon'
+
+            print(bot_response)
+            return jsonify({'status':'OK','answer':bot_response})
+
+            break
+
+        else:
+        
+            try:
+                url  = "https://en.wikipedia.org/wiki/"+ message
+                page = get(url).text
+                soup = BeautifulSoup(page,"html.parser")
+                p    = soup.find_all("p")
+                return jsonify({'status':'OK','answer':p[1].text})
+
+            except IndexError as error:
+
+                bot_response = 'Sorry i have no idea about that.'
+            
+                print(bot_response)
+                return jsonify({'status':'OK','answer':bot_response})
 
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
