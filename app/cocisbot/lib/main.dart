@@ -28,7 +28,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
   List<String> _data = [];
-  static const String BOT_URL = "http://127.0.0.1:5000/getmsg"; // replace with server address
+  static const String BOT_URL = "https://cocisbot.herokuapp.com/getmsg/"; // replace with server address
   TextEditingController _queryController = TextEditingController();
 @override
   Widget build(BuildContext context) {
