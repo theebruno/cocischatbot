@@ -40,7 +40,6 @@ SQLAlchemy==1.2.19
 srsly==1.0.2
 thinc==7.0.8
 toml==0.10.1
-tqdm==4.46.1
 typed-ast==1.4.1
 urllib3==1.25.9
 wasabi==0.6.0
