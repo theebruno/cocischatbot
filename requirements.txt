@@ -41,9 +41,5 @@ srsly==1.0.2
 thinc==7.0.8
 toml==0.10.1
 typed-ast==1.4.1
-urllib3==1.25.9
-wasabi==0.6.0
-Werkzeug==1.0.1
-wincertstore==0.2
-zipp==3.1.0
+
 
