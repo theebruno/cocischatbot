@@ -5,6 +5,7 @@ chatterbot-corpus==1.2.0
 Flask==1.1.2
 nltk==3.5
 SQLAlchemy==1.2.19
+PyYAML==3.13
 
 
 
