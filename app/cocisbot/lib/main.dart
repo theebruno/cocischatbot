@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
 primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter & Python'),
+      home: MyHomePage(title: 'COCIS BOT'),
     );
   }
 }
@@ -74,7 +74,7 @@ void _getResponse(){
       this._insertSingleItem(_queryController.text);
       var client = _getClient();
       try{
-        client.post(BOT_URL, body: {"query" : _queryController.text},)
+        client.get(BOT_URL+"?query="+_queryController.text)
         ..then((response){
           Map<String, dynamic> data = jsonDecode(response.body);
           _insertSingleItem(data['response']+"<bot>");
