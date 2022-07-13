@@ -28,7 +28,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
   List<String> _data = [];
-  static const String BOT_URL = "https://cocisbot.herokuapp.com/bot"; // replace with server address
+  static const String BOT_URL = "https://cocisbot.herokuapp.com/getmsg/"; // replace with server address
   TextEditingController _queryController = TextEditingController();
 @override
   Widget build(BuildContext context) {
@@ -77,7 +77,7 @@ void _getResponse(){
         client.post(BOT_URL, body: {"query" : _queryController.text},)
         ..then((response){
           Map<String, dynamic> data = jsonDecode(response.body);
-          _insertSingleItem(data['response']+"<bot>");
+          _insertSingleItem("yes"+"<bot>");
 });
       }catch(e){
         print("Failed -> $e");

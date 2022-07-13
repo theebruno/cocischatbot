@@ -19,10 +19,11 @@ def respond():
         response["ERROR"] = "name can't be numeric."
     # Now the user entered a valid name
     else:
-        response["response"] = f"Welcome {name} to our awesome platform!!"
+        det = f"Welcome {name} to our awesome platform!!"
 
     # Return the response in json format
-    return jsonify(response)
+    # return jsonify(response)
+    return jsonify({"response" : det})
 
 @app.route('/post/', methods=['POST'])
 def post_something():
