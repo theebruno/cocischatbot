@@ -19,7 +19,7 @@ def respond():
         response["ERROR"] = "name can't be numeric."
     # Now the user entered a valid name
     else:
-        det = f"You sent :{name}""
+        det = f"Welcome {name} to our awesome platform!!"
 
     # Return the response in json format
     # return jsonify(response)
