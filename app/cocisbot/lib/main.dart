@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Chatbot Flask',
       theme: ThemeData(
-primarySwatch: Colors.blue,
+primarySwatch: Colors.green,
       ),
       home: MyHomePage(title: 'COCIS BOT'),
     );
@@ -35,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
 return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("Flutter & Python"),
+        title: Text("COCIS BOT"),
       ),
       body: Stack(
         children: <Widget>[
