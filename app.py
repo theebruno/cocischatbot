@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+import os
+import aiml
 from flask import Flask, request, jsonify,render_template
 app = Flask(__name__)
 
@@ -11,19 +14,29 @@ def respond():
 
     response = {}
 
-    # Check if user sent a name at all
-    if not name:
-        response["ERROR"] = "no name found, please send a name."
-    # Check if the user entered a number not a name
-    elif str(name).isdigit():
-        response["ERROR"] = "name can't be numeric."
-    # Now the user entered a valid name
-    else:
-        det = f"question is {name}"
+    BRAIN_FILE="bot_brain.brn"
 
-    # Return the response in json format
-    # return jsonify(response)
-    return jsonify({"response" : det})
+    k = aiml.Kernel()
+
+    # To increase the startup speed of the bot it is
+        # possible to save the parsed aiml files as a
+        # dump. This code checks if a dump exists and
+        # otherwise loads the aiml from the xml files
+        # and saves the brain dump.
+    if os.path.exists(BRAIN_FILE):
+            print("Loading from brain file: " + BRAIN_FILE)
+            k.loadBrain(BRAIN_FILE)
+    else:
+            print("Parsing aiml files")
+            k.bootstrap(learnFiles = "startup.xml", commands = "'LOAD AIML B")
+            print("Saving brain file: " + BRAIN_FILE)
+            k.saveBrain(BRAIN_FILE)
+
+    while True:
+            input_text = name
+            response = k.respond(input_text)
+            det = response
+            return jsonify({"response" : det})
 
 
 # A welcome message to test our server
@@ -33,4 +46,4 @@ def index():
 
 if __name__ == '__main__':
     # Threaded option to enable multiple instances for multiple user access support
-    app.run(threaded=True, port=5000)
+    app.run(threaded=True, port=5000)    
