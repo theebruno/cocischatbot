@@ -1,70 +1,66 @@
-from chatbot import chatbot
-from flask import Flask, render_template, request,jsonify
-import mysql.connector
+from chatterbot import ChatBot
+from chatterbot.trainers import ListTrainer
+from requests import get
+from bs4 import BeautifulSoup
+import os
+from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
-app.static_folder = 'static'
+
+bot= ChatBot('ChatBot')
+
+trainer = ListTrainer(bot)
+
+for file in os.listdir('data/'):
+
+    chats = open('data/' + file, 'r').readlines()
+
+    trainer.train(chats)
 
 @app.route("/")
-def home():
-    return render_template("index.html")
+def hello():
+    return render_template('chat.html')
 
-@app.route("/get")
-def get_bot_response():
-    userText = request.args.get('msg')
-    return str(chatbot.get_response(userText))
+@app.route("/ask/", methods=['GET'])
+def ask():
 
-@app.route("/login")
-def login():
-    return render_template("login.html")
+    message = request.args.get("query", None)
 
-@app.route('/getmsg', methods=['GET'])
-def respond():
-    # Retrieve the name from url parameter
-    name = request.args.get("query", None)
+    bot_response = bot.get_response(message)
 
-    # For debugging
-    print(f"got name {name}")
+    while True:
 
-    response = {}
+        if bot_response.confidence > 0.1:
 
-    # Check if user sent a name at all
-    if not name:
-        response["ERROR"] = "no name found, please send a name."
-    # Check if the user entered a number not a name
-    elif str(name).isdigit():
-        response["ERROR"] = "name can't be numeric."
-    # Now the user entered a valid name
-    else:
-        det = f"Welcome {name} to our awesome platform!!"
+            bot_response = str(bot_response)      
+            print(bot_response)
+            return jsonify({'status':'OK','answer':bot_response})
+ 
+        elif message == ("bye"):
 
-    # Return the response in json format
-    # return jsonify(response)
-    return jsonify({"response" : str(chatbot.get_response(name))})    
+            bot_response='Hope to see you soon'
 
-@app.route('/result',methods=['POST','GET'])
-def result():
-    mydb=mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="",
-        database="chatbot"
-    )
-    mycursor=mydb.cursor()
-    if request.method=='POST':
-        signup=request.form
-        username = signup['username']
-        password = signup['password']
-        mycursor.excute("select * from reg where Username='"+username+"' and Password='"+password+"'")
-        r=mycursor.fetchall()
-        count=mycursor.rowcount
-        if count==1:
-            return render_template("index.html")
+            print(bot_response)
+            return jsonify({'status':'OK','answer':bot_response})
+
+            break
+
         else:
-            return render_template("login.html")
         
-    mydb.commit()
-    mycursor.close()
+            try:
+                url  = "https://en.wikipedia.org/wiki/"+ message
+                page = get(url).text
+                soup = BeautifulSoup(page,"html.parser")
+                p    = soup.find_all("p")
+                return jsonify({'status':'OK','answer':p[1].text})
 
-if __name__ == "__main__":
-    app.run() 
+            except IndexError as error:
+
+                bot_response = 'Sorry i have no idea about that.'
+            
+                print(bot_response)
+                return jsonify({'status':'OK','answer':bot_response})
+
+if __name__ == '__main__':
+    # Threaded option to enable multiple instances for multiple user access support
+    app.run(threaded=True, port=5000)

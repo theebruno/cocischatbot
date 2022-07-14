@@ -1,35 +1,66 @@
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
-from chatterbot.trainers import ChatterBotCorpusTrainer
+from requests import get
+from bs4 import BeautifulSoup
+import os
+from flask import Flask, render_template, request, jsonify
 
-# Creating ChatBot Instance
+app = Flask(__name__)
 
-chatbot = ChatBot(
-    'CollegeBot',
-    storage_adapter='chatterbot.storage.SQLStorageAdapter',
-    logic_adapters=[
-        'chatterbot.logic.MathematicalEvaluation',
-        'chatterbot.logic.TimeLogicAdapter',
-        'chatterbot.logic.BestMatch',
-        {
-            'import_path': 'chatterbot.logic.BestMatch',
-            'default_response': 'I am sorry, but I do not understand. I am still learning.',
-            'maximum_similarity_threshold': 0.90
-        }
-    ],
-    database_uri='sqlite:///database.sqlite3'
-) 
- # Training with Personal Ques & Ans 
-training_data_quesans = open('training_data/ques_ans.txt').read().splitlines()
-training_data_personal = open('training_data/personal_ques.txt').read().splitlines()
+bot= ChatBot('ChatBot')
 
-training_data = training_data_quesans + training_data_personal
+trainer = ListTrainer(bot)
 
-trainer = ListTrainer(chatbot)
-trainer.train(training_data) 
+for file in os.listdir('data/'):
 
-# Training with English Corpus Data 
-trainer_corpus = ChatterBotCorpusTrainer(chatbot)
-trainer_corpus.train(
-    'chatterbot.corpus.english'
-)
+    chats = open('data/' + file, 'r').readlines()
+
+    trainer.train(chats)
+
+@app.route("/")
+def hello():
+    return render_template('chat.html')
+
+@app.route("/ask/", methods=['GET'])
+def ask():
+
+    message = request.args.get("query", None)
+
+    bot_response = bot.get_response(message)
+
+    while True:
+
+        if bot_response.confidence > 0.1:
+
+            bot_response = str(bot_response)      
+            print(bot_response)
+            return jsonify({'status':'OK','answer':bot_response})
+ 
+        elif message == ("bye"):
+
+            bot_response='Hope to see you soon'
+
+            print(bot_response)
+            return jsonify({'status':'OK','answer':bot_response})
+
+            break
+
+        else:
+        
+            try:
+                url  = "https://en.wikipedia.org/wiki/"+ message
+                page = get(url).text
+                soup = BeautifulSoup(page,"html.parser")
+                p    = soup.find_all("p")
+                return jsonify({'status':'OK','answer':p[1].text})
+
+            except IndexError as error:
+
+                bot_response = 'Sorry i have no idea about that.'
+            
+                print(bot_response)
+                return jsonify({'status':'OK','answer':bot_response})
+
+if __name__ == '__main__':
+    # Threaded option to enable multiple instances for multiple user access support
+    app.run(threaded=True, port=5000)
