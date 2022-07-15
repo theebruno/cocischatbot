@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:bubble/bubble.dart';
 import 'package:flutter/material.dart';
+import 'package:chat_bubbles/chat_bubbles.dart';
 import 'package:http/http.dart' as http;
 void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
@@ -38,8 +39,8 @@ return Scaffold(
         title: Text("COCIS BOT"),
       ),
       body: Stack(
-        children: <Widget>[
-          AnimatedList(
+        children: [
+            AnimatedList(
             // key to call remove and insert from anywhere
             key: _listKey,
             initialItemCount: _data.length,
@@ -47,34 +48,47 @@ return Scaffold(
               return _buildItem(_data[index], animation, index);
             }
           ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: TextField(
-              decoration: InputDecoration(
-                icon: Icon(Icons.message, color: Colors.greenAccent,),
-                hintText: "Hello",
+           SizedBox(
+                height: 100,
               ),
-              controller: _queryController,
-              textInputAction: TextInputAction.send,
-              onSubmitted: (msg){
-this._getResponse();
-              },
-),
-          )
+          MessageBar(
+            onSend: (msg) => this._getResponse(msg),
+            actions: [
+              InkWell(
+                child: Icon(
+                  Icons.add,
+                  color: Colors.black,
+                  size: 24,
+                ),
+                onTap: () {},
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 8, right: 8),
+                child: InkWell(
+                  child: Icon(
+                    Icons.camera_alt,
+                    color: Colors.green,
+                    size: 24,
+                  ),
+                  onTap: () {},
+                ),
+              ),
+            ],
+          ),
         ],
-      )
-      ,
+      ),
+      
     );
   }
 http.Client _getClient(){
     return http.Client();
   }
-void _getResponse(){
-    if (_queryController.text.length>0){
-      this._insertSingleItem(_queryController.text);
+void _getResponse(String msg){
+    if (msg.length>0){
+      this._insertSingleItem(msg);
       var client = _getClient();
       try{
-        client.get(BOT_URL+"?query="+_queryController.text)
+        client.get(BOT_URL+"?query="+msg)
         ..then((response){
           Map<String, dynamic> data = jsonDecode(response.body);
           _insertSingleItem(data['response']+"<bot>");
@@ -101,10 +115,12 @@ Widget _buildItem(String item, Animation<double> animation,int index){
       child: Padding(padding: EdgeInsets.only(top: 10),
       child: Container(
         alignment: mine ?  Alignment.topLeft : Alignment.topRight,
-child : Bubble(
-        child: Text(item.replaceAll("<bot>", "")),
-        color: mine ? Colors.blue : Colors.indigo,
-        padding: BubbleEdges.all(10),
+child : BubbleSpecialThree(
+        text: item.replaceAll("<bot>", ""),
+        color: mine ? Color(0xFFE8E8EE) : Color.fromRGBO(225, 255, 199, 1.0),
+         tail: true,
+        isSender: mine ? false : true,
+        
 )),
     )
 );
