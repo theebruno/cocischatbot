@@ -99,5 +99,155 @@
 
 </category>
 
+<category>
+
+<pattern>WHERE * INFORMATION TECHNOLOGY DEPARTMENT</pattern>
+
+<template>The Information Technology Department is found on Level 2 of Block A</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * NETWORKS DEPARTMENT</pattern>
+
+<template>Level 3 of Block A houses the Networks, Information Sciences and Computer Science Departments</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * INFORMATION SCIENCES DEPARTMENT</pattern>
+
+<template>
+	<srai>WHERE * NETWORKS DEPARTMENT</srai>
+</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * COMPUTER SCIENCE DEPARTMENT</pattern>
+
+<template>
+	<srai>WHERE * NETWORKS DEPARTMENT</srai>
+</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * SEMINAR ROOM</pattern>
+
+<template>There is a seminar and conference room on Level 3 of Block A</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * PHD STUDENTS</pattern>
+
+<template>
+	<srai>WHERE * SEMINAR ROOM</srai>
+</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * WORKSHOP</pattern>
+
+<template>
+	<srai>WHERE * SEMINAR ROOM</srai>
+</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * HEADS OF DEPARTMENT</pattern>
+
+<template>
+	<random>
+		<li><srai>WHERE * THE PRINCIPLE</srai></li>
+		<li><srai>WHERE * THE DEAN</srai></li>
+		<li>They can be found on level 4</li>
+	</random>
+</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * BOARDROOM</pattern>
+
+<template>The boardroom can be found on Level 4 of Block A</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * RECORDS</pattern>
+
+<template>The Records office can be found on Level 4 of Block A</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * GRANTS OFFICE</pattern>
+
+<template>Level 5 of Block A is where you can find the Grants Office, Human Resource Office and the store</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * HR</pattern>
+
+<template>
+	<srai>WHERE * GRANTS OFFICE</srai>
+</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * STORE</pattern>
+
+<template>
+	<srai>WHERE * GRANTS OFFICE</srai>
+</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * PEARSON</pattern>
+
+<template>The Pearson GMAT East African center for US international certifications can be found on level 6 of Block A</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * GMAT</pattern>
+
+<template>
+	<srai>WHERE * PEARSON</srai>
+</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * US CERTIFICATE</pattern>
+
+<template>
+	<srai>WHERE * PEARSON</srai>
+</template>
+
+</category>
+
 </aiml>
 
