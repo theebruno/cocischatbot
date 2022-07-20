@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+
+
+<aiml version="1.0">
+
+
+
+
+<meta name="author" content="Lwanga Conrad Arthur"/>
+
+<meta name="language" content="en"/>
+
+
+
+<category>
+
+<pattern>WHERE * THE PRINCIPLE</pattern>
+
+<template>The Principle can be found in his office on Level 4 of Block A Monday to Friday 6:30am to 7pm</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * THE DEAN</pattern>
+
+<template>The dean can be found in his office on Level 4 of BLock A Monday to Friday</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * AMITY UNIVERSITY</pattern>
+
+<template>Amity University is in the basement floor of Block A</template>
+
+</category>
+<category>
+
+<pattern>WHERE * DICTS</pattern>
+
+<template>DICTS is in the basement floor of Block A</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * GEOGRAPHY</pattern>
+
+<template>Level 1 of Block A houses the lecture rooms for the Geography and Meteorology students as well as the Geography Modelling Lab(GIS lab)</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * GIS LAB</pattern>
+
+<template>
+	<srai>WHERE * GEOGRAPHY</srai>
+</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * METEOROLOGY</pattern>
+
+<template>
+	<srai>WHERE * GEOGRAPHY</srai>
+</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * PROCUREMENTS</pattern>
+
+<template>Level 2 of Block A has the Procurement and Accounts offices as well as a Huawei smart classroom</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * ACCOUNTS</pattern>
+
+<template>
+	<srai>WHERE * PROCUREMENTS</srai>
+</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * HUAWEI SMART CLASSROOM</pattern>
+
+<template>
+	<srai>WHERE * PROCUREMENTS</srai>
+</template>
+
+</category>
+
+</aiml>
+

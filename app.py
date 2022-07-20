@@ -16,6 +16,7 @@ def respond():
 
     BRAIN_FILE="bot_brain.brn"
 
+    #initialize the kernel 
     k = aiml.Kernel()
 
     # To increase the startup speed of the bot it is
