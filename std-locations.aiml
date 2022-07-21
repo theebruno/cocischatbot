@@ -248,6 +248,181 @@
 </template>
 
 </category>
+<category>
+
+<pattern>WHERE * COLLEGE LIBRARY</pattern>
+
+<template>The College library is on the first floor of Block B</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * LLB1</pattern>
+
+<template>The lecture theatres are on the level that corresponds to the last numberin their names</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * COMPUTER LABS</pattern>
+
+<template>The Computer Labs are found on Level 2 of Block B</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * VIDEO CONFERENCING</pattern>
+
+<template>The Video Conferencing Facility  is located on level 3 of Block B</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * GRADUATE RESEARCH OFFICE</pattern>
+
+<template>The Graduate Research Office is located on level 3 of Block B</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * WIMEA ICT LAB</pattern>
+
+<template>The WIMEA ICT lab is located on level 3 of Block B</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * GEOSPATIAL DATA AND COMPUTATIONAL INTELLIGENCE LAB</pattern>
+
+<template>The Geospatial data and Computational Intelligence Lab is located on level 3 of Block B</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * REVENUE OFFICE</pattern>
+
+<template>Level 3 of Block B has the Revenue Office</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * COLLEGE REGISTRAR</pattern>
+
+<template>Level 3 of Block B has the College Registrar</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * SOFTWARE SYSTEMS CENTRE</pattern>
+
+<template>Level 3 of Block B has the Software Systems Centre</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * AIRQO</pattern>
+
+<template>AirQo is on Level 3 of Block B</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * HITRAIN LAB</pattern>
+
+<template>Level 3 of Block B has the Hi-Train Lab</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * STUDENT LOCKERS</pattern>
+
+<template>Level 3 of Block B has the Student Lockers</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * STUDENT LEADERS OFFICE</pattern>
+
+<template>Level 3 of Block B has the Student Leader's Office</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * SMALL COMPUTER LAB</pattern>
+
+<template>The small computer lab can be found on level 4 of Block B</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * BIG COPMUTER LAB</pattern>
+
+<template>Level 4 of Block B has the Big Copmuter Lab</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * CENTRE FOR INNOVATION AND PROFESSIONAL SKILLS DEVELOPMENT</pattern>
+
+<template>Level 5 of Block B has the Centre for innovation and professional skills development</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * INNOVATION AND INCUBATION CENTRE</pattern>
+
+<template>Level 5 of Block B has the Innovation and Incubation Centre</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * DEPARTMENT OF ICT SUPPORT AND SERVICES OFFICE</pattern>
+
+<template>The Department of ICT Support and Services Office can be found on Level 6 of Block B</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * AI LAB</pattern>
+
+<template>The AI Lab is on the sixth Level of Block B</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * BIG ANALYTICS LAB</pattern>
+
+<template>The Big Analytics Lab is on Level 6 of Block B</template>
+
+</category>
+
+<category>
+
+<pattern>WHERE * OUTREACH AND COMMUNITY ENGAGEMENT OFFICE</pattern>
+
+<template>Level 6 of Block B has the Outreach and Community Engagement Office</template>
+
+</category>
 
 </aiml>
 
