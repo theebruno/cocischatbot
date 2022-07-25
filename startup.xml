@@ -30,6 +30,7 @@
 <learn>std-pickup.aiml</learn>
 <learn>std-profile.aiml</learn>
 <learn>std-religion.aiml</learn>
+<learn>std-resources.aiml</learn>
 <learn>std-robot.aiml</learn>
 <learn>std-sales.aiml</learn>
 <learn>std-sports.aiml</learn>
