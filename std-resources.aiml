@@ -5,33 +5,33 @@
 <meta name="language" content="en"/>
 
 <category>
-<pattern>PRINTERY</pattern>
+<pattern>_ PRINTERY</pattern>
 <template>The Printeries can be found on the ground floor and 1st floor of Block B.</template>
 </category>
 
 <category>
-<pattern>TOILET</pattern>
+<pattern>_ TOILETS</pattern>
 <template>Find Student/ visitor toilets on Block B- ground floor, 1st and 3rd levels.
-The rest of the levels have staff toilets
+The rest of the levels have staff toilets.
 
 </template>
 </category>
 
 <category>
-<pattern>CANTEEN</pattern>
+<pattern>_ CANTEEN</pattern>
 <template>The canteen is located on the ground floor of Block B</template>
 </category>
 
 <category>
-<pattern>WASHROOMS</pattern>
+<pattern>_ WASHROOMS</pattern>
 <template>Find Student/ visitor washrooms on Block B- ground floor, 1st and 3rd levels
 The rest of the levels have staff washrooms
 </template>
 </category>
 
 <category>
-<pattern>CAR PARKING</pattern>
-<template>Normally, Sudents park on block B and staff on Block A</template>
+<pattern>_ CAR PARKING</pattern>
+<template>Normally, Students park on block B and staff on Block A</template>
 </category>
 
 <category>
@@ -49,7 +49,7 @@ The rest of the levels have staff washrooms
 </category>
 
 <category>
-<pattern>WHERE IS THE PROCUREMENTS OFFICE</pattern>
+<pattern>_ PROCUREMENTS OFFICE</pattern>
 <template>Level 2 of Block A has the Procurement and Accounts offices as well as a Huawei smart classroom</template>
 </category>
 
@@ -72,14 +72,14 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE IS THE INFORMATION TECHNOLOGY DEPARTMENT</pattern>
+<pattern>_ INFORMATION TECHNOLOGY DEPARTMENT</pattern>
 
 <template>The Information Technology Department is found on Level 2 of Block A</template>
 
 </category>
 <category>
 
-<pattern>WHERE IS THE ICT DEPARTMENT</pattern>
+<pattern>_ ICT DEPARTMENT</pattern>
 
 <template>The Information and Technology Department is found on Level 2 of Block A</template>
 
@@ -87,7 +87,7 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE IS THE NETWORKS DEPARTMENT</pattern>
+<pattern>_ NETWORKS DEPARTMENT</pattern>
 
 <template>Level 3 of Block A houses the Networks, Information Sciences and Computer Science Departments</template>
 
@@ -107,15 +107,14 @@ The rest of the levels have staff washrooms
 
 <pattern>WHERE IS THE COMPUTER SCIENCE DEPARTMENT</pattern>
 
-<template>
-	<srai>WHERE * NETWORKS DEPARTMENT</srai>
+<template>Level 3 of block A to the right of the washrooms
 </template>
 
 </category>
 
 <category>
 
-<pattern>WHERE IS THE SEMINAR ROOM</pattern>
+<pattern>_ SEMINAR ROOM</pattern>
 
 <template>There is a seminar and conference room on Level 3 of Block A</template>
 
@@ -143,12 +142,11 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE ARE THE HEADS OF DEPARTMENTS</pattern>
+<pattern>_ HEADS OF DEPARTMENTS</pattern>
 
 <template>
 	<random>
-		<li><srai>WHERE IS THE THE PRINCIPLE</srai></li>
-		<li><srai>WHERE IS THE THE DEAN</srai></li>
+		
 		<li>They can be found on level 4</li>
 	</random>
 </template>
@@ -157,7 +155,7 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE IS THE BOARDROOM</pattern>
+<pattern>_ BOARD ROOM</pattern>
 
 <template>The boardroom can be found on Level 4 of Block A</template>
 
@@ -165,7 +163,7 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE IS THE RECORDS</pattern>
+<pattern>_ RECORDS OFFICE</pattern>
 
 <template>The Records office can be found on Level 4 of Block A</template>
 
@@ -173,7 +171,7 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE IS THE GRANTS OFFICE</pattern>
+<pattern>_ GRANTS OFFICE</pattern>
 
 <template>Level 5 of Block A is where you can find the Grants Office, Human Resource Office and the store</template>
 
@@ -201,7 +199,7 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE IS PEARSON</pattern>
+<pattern>_ PEARSON</pattern>
 
 <template>The Pearson GMAT East African center for US international certifications can be found on level 6 of Block A</template>
 
@@ -228,7 +226,7 @@ The rest of the levels have staff washrooms
 </category>
 <category>
 
-<pattern>WHERE IS THE COLLEGE LIBRARY</pattern>
+<pattern>_ LIBRARY</pattern>
 
 <template>The College library is on the first floor of Block B</template>
 
@@ -236,7 +234,7 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE IS LLB1</pattern>
+<pattern>_LLB_</pattern>
 
 <template>The lecture theatres are on the level that corresponds to the last numberin their names</template>
 
@@ -244,7 +242,7 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE * COMPUTER LABS</pattern>
+<pattern>_ COMPUTER LABS</pattern>
 
 <template>The Computer Labs are found on Level 2 of Block B</template>
 
@@ -252,7 +250,7 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE IS THE VIDEO CONFERENCING</pattern>
+<pattern>_ VIDEO CONFERENCING FACILTY</pattern>
 
 <template>The Video Conferencing Facility  is located on level 3 of Block B</template>
 
@@ -260,7 +258,7 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE IS THE GRADUATE RESEARCH OFFICE</pattern>
+<pattern>_ GRADUATE RESEARCH OFFICE</pattern>
 
 <template>The Graduate Research Office is located on level 3 of Block B</template>
 
@@ -268,7 +266,7 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE IS THE WIMEA ICT LAB</pattern>
+<pattern>_ WIMEA ICT LAB</pattern>
 
 <template>The WIMEA ICT lab is located on level 3 of Block B</template>
 
@@ -276,7 +274,7 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE IS THE GEOSPATIAL DATA AND COMPUTATIONAL INTELLIGENCE LAB</pattern>
+<pattern>_ GEOSPATIAL DATA AND COMPUTATIONAL INTELLIGENCE LAB</pattern>
 
 <template>The Geospatial data and Computational Intelligence Lab is located on level 3 of Block B</template>
 
@@ -284,7 +282,7 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE IS THE REVENUE OFFICE</pattern>
+<pattern>_ REVENUE OFFICE</pattern>
 
 <template>Level 3 of Block B has the Revenue Office</template>
 
@@ -292,7 +290,7 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE IS THE COLLEGE REGISTRAR</pattern>
+<pattern>_ COLLEGE REGISTRAR</pattern>
 
 <template>Level 3 of Block B has the College Registrar</template>
 
@@ -300,7 +298,7 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE IS THE SOFTWARE SYSTEMS CENTRE</pattern>
+<pattern>_ SOFTWARE SYSTEMS CENTRE</pattern>
 
 <template>Level 3 of Block B has the Software Systems Centre</template>
 
@@ -308,7 +306,7 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE IS THE AIRQO</pattern>
+<pattern>_ AIRQO</pattern>
 
 <template>AirQo is on Level 3 of Block B</template>
 
@@ -316,7 +314,7 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE IS THE HITRAIN LAB</pattern>
+<pattern>_ HITRAIN LAB</pattern>
 
 <template>Level 3 of Block B has the Hi-Train Lab</template>
 
@@ -324,7 +322,7 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE * STUDENT LOCKERS</pattern>
+<pattern>_ STUDENT LOCKERS</pattern>
 
 <template>Level 3 of Block B has the Student Lockers</template>
 
@@ -332,15 +330,22 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE ARE THE STUDENT LEADERS OFFICE</pattern>
+<pattern>_ STUDENT LEADERS OFFICE</pattern>
 
 <template>Level 3 of Block B has the Student Leader's Office</template>
+
+</category>
+<category>
+
+<pattern>_ COMPUTER LAB</pattern>
+
+<template>The computer labs can be found on level 4 of Block B</template>
 
 </category>
 
 <category>
 
-<pattern>WHERE IS THE  SMALL COMPUTER LAB</pattern>
+<pattern>_ SMALL COMPUTER LAB</pattern>
 
 <template>The small computer lab can be found on level 4 of Block B</template>
 
@@ -348,7 +353,7 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE * BIG COPMUTER LAB</pattern>
+<pattern>_ BIG COPMUTER LAB</pattern>
 
 <template>Level 4 of Block B has the Big Copmuter Lab</template>
 
@@ -356,7 +361,7 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE IS THE CENTRE FOR INNOVATION AND PROFESSIONAL SKILLS DEVELOPMENT</pattern>
+<pattern>_ CENTRE FOR INNOVATION AND PROFESSIONAL SKILLS DEVELOPMENT</pattern>
 
 <template>Level 5 of Block B has the Centre for innovation and professional skills development</template>
 
@@ -364,7 +369,7 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE IS THE INNOVATION AND INCUBATION CENTRE</pattern>
+<pattern>_ INNOVATION AND INCUBATION CENTRE</pattern>
 
 <template>Level 5 of Block B has the Innovation and Incubation Centre</template>
 
@@ -372,7 +377,7 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE IS THE DEPARTMENT OF ICT SUPPORT AND SERVICES OFFICE</pattern>
+<pattern>_ DEPARTMENT OF ICT SUPPORT AND SERVICES OFFICE</pattern>
 
 <template>The Department of ICT Support and Services Office can be found on Level 6 of Block B</template>
 
@@ -380,7 +385,7 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE IS THE AI LAB</pattern>
+<pattern>_ AI LAB</pattern>
 
 <template>The AI Lab is on the sixth Level of Block B</template>
 
@@ -388,7 +393,7 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE IS THE BIG ANALYTICS LAB</pattern>
+<pattern>_ BIG ANALYTICS LAB</pattern>
 
 <template>The Big Analytics Lab is on Level 6 of Block B</template>
 
@@ -396,11 +401,12 @@ The rest of the levels have staff washrooms
 
 <category>
 
-<pattern>WHERE IS THE OUTREACH AND COMMUNITY ENGAGEMENT OFFICE</pattern>
+<pattern>_ OUTREACH AND COMMUNITY ENGAGEMENT OFFICE</pattern>
 
 <template>Level 6 of Block B has the Outreach and Community Engagement Office</template>
 
 </category>
+
 
 </aiml>
 

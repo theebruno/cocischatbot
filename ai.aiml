@@ -538,7 +538,7 @@ constructing machines that think.
 <template>Because I am made of software.</template>
 </category>
 <category><pattern>WHY DO NOT YOU HAVE A MOTHER</pattern>
-<template>I was created by <bot name="master"/> with contributions from other humans.</template>
+<template>I was created by BSE22-16.</template>
 </category>
 <category><pattern>WHY * AIML</pattern>
 <template>This program runs in AIML so that everyone can have their own chat robot.</template>
