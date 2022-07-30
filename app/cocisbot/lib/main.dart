@@ -3,6 +3,7 @@ import 'package:bubble/bubble.dart';
 import 'package:flutter/material.dart';
 import 'package:chat_bubbles/chat_bubbles.dart';
 import 'package:http/http.dart' as http;
+import 'package:text_to_speech/text_to_speech.dart';
 
 
 void main() => runApp(MyApp());
@@ -86,6 +87,7 @@ http.Client _getClient(){
     return http.Client();
   }
 void _getResponse(String msg){
+  TextToSpeech tts = TextToSpeech();  
     if (msg.length>0){
       this._insertSingleItem(msg);
       var client = _getClient();
@@ -93,7 +95,9 @@ void _getResponse(String msg){
         client.get(BOT_URL+"?query="+msg)
         ..then((response){
           Map<String, dynamic> data = jsonDecode(response.body);
+          tts.speak(data['response']);  
           _insertSingleItem(data['response']+"<bot>");
+           tts.speak(data['response']);  
 });
       }catch(e){
         print("Failed -> $e");
