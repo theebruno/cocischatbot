@@ -89,9 +89,39 @@
 			"responses": ["The College library is on the first floor of Block B"],
 			"context_set":""
 		},
+		{"tag": "LLB",
+			"patterns": ["Where is the LLB1", "How can i find LLB2", "Where can i find LLB3", "on which level is LLB4", "How do i get to LLB5", "Where is LLB6 located"],
+			"responses": ["The lecture theatres are on the level that corresponds to the last numberin their names e.g LLB1 on level 1 LLB2 on level 2 etc."],
+			"context_set":""
+		},
+		{"tag": "labs",
+			"patterns": ["Where is the computer lab", "How can i find the computer lab", "Where can i find the computer lab", "on which level is the computer lab", "How do i get to the lab", "Where is the comp lab located"],
+			"responses": ["The Computer Labs are found on Level 2 of Block B"],
+			"context_set":""
+		},
+		{"tag": "bag section",
+			"patterns": ["Where is the bag section", "How can i find the bag section", "Where can i keep my bag", "on which level is the bag keeping place", "How do i get to the bag section", "Where is the bag section located"],
+			"responses": ["The bag section is on level 3 of Block B in the right hand corner opposite the WIMEA labs"],
+			"context_set":""
+		},
 		{"tag": "Seminar room",
 			"patterns": ["Where is the seminar room", "How can i find the seminar room", "Where can i find the phd students", "Where can i find the workshop", "Where is the workshop"],
 			"responses": ["There is a seminar and conference room on Level 3 of Block A"],
+			"context_set":""
+		},
+		{"tag": "video conference",
+			"patterns": ["Where is the video conference facility", "How can i find the video conference room", "Where can i find the room for video conferencing", "Where can i find the video conference room", "Where is the video conference"],
+			"responses": ["The Video Conferencing Facility  is located on level 3 of Block B"],
+			"context_set":""
+		},
+		{"tag": "graduate research office",
+			"patterns": ["Where is the graduate research office", "How can i find the graduate office", "Where can i find the room for graduate research", "Where can i find the grad room", "Where is the graduates place"],
+			"responses": ["The Graduate Research Office is located on level 3 of Block B"],
+			"context_set":""
+		},
+		{"tag": "wimea",
+			"patterns": ["Where is the wimea lab", "How can i find the wimea lab", "Where can i find the room for weather research", "Where can i find wimea"],
+			"responses": ["The WIMEA ICT lab is located on level 3 of Block B opposite the bag section"],
 			"context_set":""
 		},
 		{"tag": "joke",
