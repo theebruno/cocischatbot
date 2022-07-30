@@ -54,6 +54,8 @@ print("Chatbot is now active")
 
 while True:
 	message = input("")
+	if message == "quit":
+			break
 	ints = predict_class(message)
 	res = get_response(ints, intents)
 	print(res)
