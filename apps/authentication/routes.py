@@ -17,6 +17,16 @@ from apps.authentication.models import Users
 
 from apps.authentication.util import verify_pass
 
+#importing ai related packages
+import random
+import json 
+import pickle
+import numpy as np
+import nltk
+
+from nltk.stem import WordNetLemmatizer
+from tensorflow.keras.models import load_model
+
 
 @blueprint.route('/')
 def route_default():
@@ -118,3 +128,16 @@ def not_found_error(error):
 @blueprint.errorhandler(500)
 def internal_error(error):
     return render_template('home/page-500.html'), 500
+#addding ai module
+
+@blueprint.route('/getmsg/', methods=['GET'])
+def respond():
+    # Retrieve the name from url parameter
+    name = request.args.get("query", None)
+
+    
+    while True:
+            input_text = name
+            
+            return jsonify({"response" : name})
+
