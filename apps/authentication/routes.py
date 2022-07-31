@@ -180,13 +180,9 @@ print("Chatbot is now active")
 def respond():
     # Retrieve the name from url parameter
     name = request.args.get("query", None)
-
-    
     while True:
-        
         message = name
 	    ints = predict_class(message)
 	    res = get_response(ints, intents)
-            
         return jsonify({"response" : name})
 
