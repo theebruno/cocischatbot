@@ -184,4 +184,3 @@ def respond():
 	    ints = predict_class(name)
 	    res = get_response(ints, intents)
         return jsonify({"response" : name})
-
