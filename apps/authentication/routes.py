@@ -132,11 +132,11 @@ def internal_error(error):
 
 #addding ai module
 lemmatizer = WordNetLemmatizer()
-intents = json.loads(open('authentication/intents.json').read())
+intents = json.loads(open('intents.json').read())
 
-words = pickle.load(open('authentication/words.pkl', 'rb'))
-classes = pickle.load(open('authentication/classes.pkl', 'rb'))
-model = load_model('authentication/chatbotmodel.h5')
+words = pickle.load(open('words.pkl', 'rb'))
+classes = pickle.load(open('classes.pkl', 'rb'))
+model = load_model('chatbotmodel.h5')
 
 def clean_up_sentence(sentence):
 	sentence_words = nltk.word_tokenize(sentence)
