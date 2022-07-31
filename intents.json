@@ -1,0 +1,138 @@
+{"intents":[
+		{"tag": "greeting",
+			"patterns": ["Hi", "Hello", "Sup", "What's good"],
+			"responses": ["Hello", "What's good", "Hi there", "What's up"],
+			"context_set":""
+		},
+		{"tag": "closing",
+			"patterns": ["What time does the college close", "when do i leave"],
+			"responses": ["The college closes at 10 pm"],
+			"context_set":""
+		},
+		{"tag": "principal",
+			"patterns": ["Where do i find the principal", "is the principal around", "what time is the principal available"],
+			"responses": ["The principal can be found in his office at level 4 of Block A Monday to Friday from 6:30am to 7:00pm"],
+			"context_set":""
+		},
+		{"tag": "parking",
+			"patterns": ["Where do i park", "can i park here", "is it safe for me to leave my car here"],
+			"responses": ["You may park anywhere in the college except in the reserved parking spaces"],
+			"context_set":""
+		},
+		{"tag": "printery",
+			"patterns": ["Where is the printery", "How can i find the printery" ],
+			"responses": ["The Printeries can be found on the ground floor and 1st floor of Block B"],
+			"context_set":""
+		},
+		{"tag": "toilet",
+			"patterns": ["Where is the toilet", "How can i find the toilet", "Where's the loo", "Where are the bathrooms","Where do i ease myself" ],
+			"responses": ["Find Student/visitor toilets on Block B - ground floor, 2nd and 4th levels.The rest of the levels have staff toilets."],
+			"context_set":""
+		},
+		{"tag": "canteen",
+			"patterns": ["Where is the canteen", "How can i find the canteen", "Where can i get a bite to eat","Where can i buy lunch" ],
+			"responses": ["The canteen is located on the ground floor of Block B"],
+			"context_set":""
+		},
+		{"tag": "GIS Lab",
+			"patterns": ["Where is the GIS lab", "How can i find the geography students", "Where can i find the meteorology department"],
+			"responses": ["The GIS Lab is located on the ground floor of Block A"],
+			"context_set":""
+		},
+		{"tag": "Procurements",
+			"patterns": ["Where is the procurements office", "How can i find the accountant", "Where can i find the huawei samrt classroom","Where can i find procurements" ],
+			"responses": ["Level 2 of Block A has the Procurement and Accounts offices as well as a Huawei smart classroom"],
+			"context_set":""
+		},
+		{"tag": "information technology department",
+			"patterns": ["Where is the IT department", "How can i find the information technology department", "Where can i find the IT department"],
+			"responses": ["The Information Technology Department is found on Level 2 of Block A"],
+			"context_set":""
+		},
+		{"tag": "networks department",
+			"patterns": ["Where is the networks department", "How can i find the networks department", "Where can i find the information sciences department"],
+			"responses": ["Level 3 of Block A houses the Networks, Information Sciences and Computer Science Departments"],
+			"context_set":""
+		},
+		{"tag": "computer science department",
+			"patterns": ["Where is the CS department", "How can i find the computer science department", "Where can i find the computer science department"],
+			"responses": ["Level 3 of block A to the right of the washrooms"],
+			"context_set":""
+		},
+		{"tag": "Heads of department",
+			"patterns": ["Where are the heads of department", "How can i find the hods", "Where can i find the heads of department"],
+			"responses": ["They can be found on level 4 of Block A"],
+			"context_set":""
+		},
+		{"tag": "Boardroom",
+			"patterns": ["Where is the boardroom", "How can i find the boardroom", "Where can i find the boardroom"],
+			"responses": ["The boardroom can be found on Level 4 of Block A"],
+			"context_set":""
+		},
+		{"tag": "Records",
+			"patterns": ["Where is the records office", "How can i find the records department", "Where can i find records"],
+			"responses": ["The records office can be found on Level 4 of Block A"],
+			"context_set":""
+		},
+		{"tag": "Grants",
+			"patterns": ["Where is the grants office", "How can i find the grants department", "Where can i find hr", "how do i get to the human resource office", "Where is the store","At what level is the store"],
+			"responses": ["Level 5 of Block A is where you can find the Grants Office, Human Resource Office and the store"],
+			"context_set":""
+		},
+		{"tag": "Pearson",
+			"patterns": ["Where is the Pearson gmat east african centre for US International certfications", "How can i get my Pearson certificate", "Where can i find the certfications office","Where do i pick my US certificate"],
+			"responses": ["The Pearson GMAT East African center for US international certifications can be found on level 6 of Block A"],
+			"context_set":""
+		},
+		{"tag": "library",
+			"patterns": ["Where is the library", "How can i find the library", "Where can i find the library"],
+			"responses": ["The College library is on the first floor of Block B"],
+			"context_set":""
+		},
+		{"tag": "LLB",
+			"patterns": ["Where is the LLB1", "How can i find LLB2", "Where can i find LLB3", "on which level is LLB4", "How do i get to LLB5", "Where is LLB6 located"],
+			"responses": ["The lecture theatres are on the level that corresponds to the last numberin their names e.g LLB1 on level 1 LLB2 on level 2 etc."],
+			"context_set":""
+		},
+		{"tag": "labs",
+			"patterns": ["Where is the computer lab", "How can i find the computer lab", "Where can i find the computer lab", "on which level is the computer lab", "How do i get to the lab", "Where is the comp lab located"],
+			"responses": ["The Computer Labs are found on Level 2 of Block B"],
+			"context_set":""
+		},
+		{"tag": "bag section",
+			"patterns": ["Where is the bag section", "How can i find the bag section", "Where can i keep my bag", "on which level is the bag keeping place", "How do i get to the bag section", "Where is the bag section located"],
+			"responses": ["The bag section is on level 3 of Block B in the right hand corner opposite the WIMEA labs"],
+			"context_set":""
+		},
+		{"tag": "Seminar room",
+			"patterns": ["Where is the seminar room", "How can i find the seminar room", "Where can i find the phd students", "Where can i find the workshop", "Where is the workshop"],
+			"responses": ["There is a seminar and conference room on Level 3 of Block A"],
+			"context_set":""
+		},
+		{"tag": "video conference",
+			"patterns": ["Where is the video conference facility", "How can i find the video conference room", "Where can i find the room for video conferencing", "Where can i find the video conference room", "Where is the video conference"],
+			"responses": ["The Video Conferencing Facility  is located on level 3 of Block B"],
+			"context_set":""
+		},
+		{"tag": "graduate research office",
+			"patterns": ["Where is the graduate research office", "How can i find the graduate office", "Where can i find the room for graduate research", "Where can i find the grad room", "Where is the graduates place"],
+			"responses": ["The Graduate Research Office is located on level 3 of Block B"],
+			"context_set":""
+		},
+		{"tag": "wimea",
+			"patterns": ["Where is the wimea lab", "How can i find the wimea lab", "Where can i find the room for weather research", "Where can i find wimea"],
+			"responses": ["The WIMEA ICT lab is located on level 3 of Block B opposite the bag section"],
+			"context_set":""
+		},
+		{"tag": "joke",
+	        "patterns": ["tell me a joke?", "make me laugh", "say something funny" ],
+	        "responses": ["How do you make holy water? you boil the hell out of it","what kind of bees make milk instead of honey?Boobies"],
+		 	"context_set": ""
+		},
+		{"tag": "bye",
+			"patterns": ["see you", "goodbye", "later", "sayonara"],
+			"responses": ["bye", "see you", "goodbye"],
+			"context_set":""
+		}
+	]
+}
