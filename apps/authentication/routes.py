@@ -136,6 +136,7 @@ def respond():
     ints = predict_class(name)
     res = get_response(ints, intents)
     return jsonify({"response" : res})
+    
 #addding ai module
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open('intents.json').read())
