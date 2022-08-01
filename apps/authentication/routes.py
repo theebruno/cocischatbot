@@ -3,7 +3,7 @@
 Copyright (c) 2019 - present AppSeed.us
 """
 
-from flask import render_template, redirect, jsonify, request, url_for
+from flask import render_template,jsonify, redirect, request, url_for
 from flask_login import (
     current_user,
     login_user,
@@ -27,12 +27,13 @@ import nltk
 from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import load_model
 
+
 @blueprint.route('/')
 def route_default():
     return redirect(url_for('authentication_blueprint.login'))
 
 
-# Login & Registration!
+# Login & Registration
 
 @blueprint.route('/login', methods=['GET', 'POST'])
 def login():
@@ -128,8 +129,13 @@ def not_found_error(error):
 def internal_error(error):
     return render_template('home/page-500.html'), 500
 
-
-
+@blueprint.route('/getmsg/', methods=['GET'])
+def respond():
+    # Retrieve the name from url parameter
+    name = request.args.get("query", None)
+    ints = predict_class(name)
+    res = get_response(ints, intents)
+    return jsonify({"response" : res})
 #addding ai module
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open('intents.json').read())
@@ -174,12 +180,5 @@ def get_response(intents_list, intents_json):
 			break
 	return result
 
-print("Chatbot is now active")
-
-@blueprint.route('/getmsg/', methods=['GET'])
-def respond():
-    # Retrieve the name from url parameter
-    name = request.args.get("query", None)
-    ints = predict_class(name)
-    res = get_response(ints, intents)
-    return jsonify({"response" : name})
+print("Chatbot is now active")       
+    
