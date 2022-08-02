@@ -124,6 +124,31 @@
 			"responses": ["The WIMEA ICT lab is located on level 3 of Block B opposite the bag section"],
 			"context_set":""
 		},
+		{"tag": "Geospatial data and Computational Intelligence Lab",
+			"patterns": ["Where is the Geospatial data and Computational Intelligence Lab", "How can i find the geospatial lab", "Where can i find the room for computational intelligence", "Where is geospatial data room located"],
+			"responses": ["The Geospatial data and Computational Intelligence Lab is located on level 3 of Block B"],
+			"context_set":""
+		},
+		{"tag": "Revenue Office",
+			"patterns": ["Where is the revenue office", "How can i find the revenue office", "Where can i find the room for revenue", "Where can i find revenue"],
+			"responses": ["Level 3 of Block B has the Revenue Office"],
+			"context_set":""
+		},
+		{"tag": "College Registrar",
+			"patterns": ["Where is the registrar", "How can i find the college registrar", "Where can i find the room for the college's registrar", "Where can i find registrar's office"],
+			"responses": ["Level 3 of Block B has the College Registrar"],
+			"context_set":""
+		},
+		{"tag": "Software Systems Centre",
+			"patterns": ["Where is the Software systems center", "How can i find the software systems centre", "Where can i find the room for software systems", "Where can i find ssc"],
+			"responses": ["Level 3 of Block B has the Software Systems Centre"],
+			"context_set":""
+		},
+		{"tag": "AirQo",
+			"patterns": ["Where is the revenue office", "How can i find the revenue office", "Where can i find the room for revenue", "Where can i find revenue"],
+			"responses": ["Level 3 of Block B has the Revenue Office"],
+			"context_set":""
+		},
 		{"tag": "joke",
 	        "patterns": ["tell me a joke?", "make me laugh", "say something funny" ],
 	        "responses": ["How do you make holy water? you boil the hell out of it","what kind of bees make milk instead of honey?Boobies"],
