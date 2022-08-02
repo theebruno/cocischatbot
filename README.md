@@ -42,7 +42,7 @@ pip install requirments.txt
 
 ### Usage
 
-- Now run the `app.py` using
+- Now run the `run.py` using
 
 ```bash
 python app.py
