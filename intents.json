@@ -10,7 +10,7 @@
 			"context_set":""
 		},
 		{"tag": "principal",
-			"patterns": ["Where do i find the principal", "is the principal around", "what time is the principal available"],
+			"patterns": ["Where do i find the principal", "is the principal around", "what time is the principal available", "On what level is the principle"],
 			"responses": ["The principal can be found in his office at level 4 of Block A Monday to Friday from 6:30am to 7:00pm"],
 			"context_set":""
 		},
