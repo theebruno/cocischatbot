@@ -14,6 +14,16 @@
 			"responses": ["The principal can be found in his office at level 4 of Block A Monday to Friday from 6:30am to 7:00pm"],
 			"context_set":""
 		},
+		{"tag": "dean",
+			"patterns": ["Where do i find the dean", "is the dean around", "what time is the dean available", "On what level is the dean"],
+			"responses": ["The dean can be found in his office on Level 4 of BLock A Monday to Friday"],
+			"context_set":""
+		},
+		{"tag": "amity",
+			"patterns": ["Where do i find Amity University", "is amity university here", "where is the indian university", "On what level is amity"],
+			"responses": ["Amity University is in the basement floor of Block A"],
+			"context_set":""
+		},
 		{"tag": "parking",
 			"patterns": ["Where do i park", "can i park here", "is it safe for me to leave my car here"],
 			"responses": ["You may park anywhere in the college except in the reserved parking spaces"],
