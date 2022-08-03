@@ -4,6 +4,21 @@
 			"responses": ["Hello", "What's good", "Hi there", "What's up"],
 			"context_set":""
 		},
+		{"tag": "name",
+			"patterns": ["What is your name", "what should i call you", "What are you", "What do they call you"],
+			"responses": ["I am Joi an Artificially Intelligent Chatbot created to aid visitors, personnel and students of Cocis"],
+			"context_set":""
+		},
+		{"tag": "creators",
+			"patterns": ["who is your maker", "who created you", "who made you", "who is your coder"],
+			"responses": ["I was created by a group of students by the names Lwanga Conrad Arthur, Mugire Bruno, Ntaryebwamukama Jedidiah and Tumukunde Benon"],
+			"context_set":""
+		},
+		{"tag": "fail",
+			"patterns": ["you didn't answer my question", "that is not what i wanted", "that is not right", "that is not what i meant","you did not answer correctly"],
+			"responses": ["I'm sorry, could you rephrase that question for me"],
+			"context_set":""
+		},
 		{"tag": "closing",
 			"patterns": ["What time does the college close", "when do i leave"],
 			"responses": ["The college closes at 10 pm"],
