@@ -145,8 +145,68 @@
 			"context_set":""
 		},
 		{"tag": "AirQo",
-			"patterns": ["Where is the revenue office", "How can i find the revenue office", "Where can i find the room for revenue", "Where can i find revenue"],
-			"responses": ["Level 3 of Block B has the Revenue Office"],
+			"patterns": ["Where are the  AirQo offices", "How can i find the AirQo office", "Where can i find the room for AirQo", "Where can i find AirQo"],
+			"responses": ["AirQo is on Level 3 of Block B"],
+			"context_set":""
+		},
+		{"tag": "hitrain",
+			"patterns": ["Where are the  Hitrain offices", "How can i find the hitrain lab", "Where can i find the room for hitrain", "Where can i find hitrain"],
+			"responses": ["Level 3 of Block B has the Hi-Train Lab"],
+			"context_set":""
+		},
+		{"tag": "student lockers",
+			"patterns": ["Where are the student lockers", "How can i find the student lockers", "Where can i find the place where the student lockers are", "Where can i find lockers for students"],
+			"responses": ["Level 3 of Block B has the student lockers"],
+			"context_set":""
+		},
+		{"tag": "student leaders",
+			"patterns": ["Where are the student leaders", "How can i find the student leaders", "Where can i find the room for student leaders", "Where can i find leaders for students"],
+			"responses": ["The student leaders can be found on level 3 of block B"],
+			"context_set":""
+		},
+		{"tag": "small lab",
+			"patterns": ["Where is the small computer lab", "How can i find the small lab", "Where can i find the small room for computers", "Where can i find the small lab for computers"],
+			"responses": ["The small computer lab can be found on level 4 of Block B"],
+			"context_set":""
+		},
+		{"tag": "big lab",
+			"patterns": ["Where is the big computer lab", "How can i find the big lab", "Where can i find the big room for computers", "Where can i find the big lab for computers"],
+			"responses": ["Level 4 of Block B has the Big Copmuter Lab"],
+			"context_set":""
+		},
+		{"tag": "center for innovation and professional skills development",
+			"patterns": ["Where is the center for innovation and professional skills development", "How can i find the centre for innovation and professional skills development", "Where can i find the center for innovation and professional skills development", "Where can i find the centre for innovation and professional skills development"],
+			"responses": ["Level 5 of Block B has the Centre for innovation and professional skills development"],
+			"context_set":""
+		},
+		{"tag": "innovation and incubation center",
+			"patterns": ["Where is the innovation and incubation centre", "How can i find the innovation and incubation center", "Where can i find the innovation and incubation centre", "Where is the innovation and incubation center located"],
+			"responses": ["Level 5 of Block B has the Innovation and Incubation Centre"],
+			"context_set":""
+		},
+		{"tag": "Department of ICT and support services",
+			"patterns": ["Where is the Department of ICT and support services", "How can i find the Department of ICT and support services", "Where can i find the Department of ICT and support services", "Where is the Department of ICT and support services located"],
+			"responses": ["The Department of ICT Support and Services Office can be found on Level 6 of Block B"],
+			"context_set":""
+		},
+		{"tag": "AI lab",
+			"patterns": ["Where is the AI lab", "How can i find the Artificial Intelligence lab", "Where can i find the AI lab", "Where is the Artificial Intelligence lab located"],
+			"responses": ["The AI Lab is on the sixth Level of Block B"],
+			"context_set":""
+		},
+		{"tag": "big analytics lab",
+			"patterns": ["Where is the big analytics lab", "How can i find the big analytics lab", "Where can i find the big analytics lab", "Where is the big analytics lab located"],
+			"responses": ["The Big Analytics Lab is on Level 6 of Block B"],
+			"context_set":""
+		},
+		{"tag": "big analytics lab",
+			"patterns": ["Where is the big analytics lab", "How can i find the big analytics lab", "Where can i find the big analytics lab", "Where is the big analytics lab located"],
+			"responses": ["The Big Analytics Lab is on Level 6 of Block B"],
+			"context_set":""
+		},
+		{"tag": "outreach and community engagement office",
+			"patterns": ["Where is the outreach and community engagement office", "How can i find the outreach office", "Where can i find the community engagement office", "Where is the outreach and community engagement office located"],
+			"responses": ["Level 6 of Block B has the Outreach and Community Engagement Office"],
 			"context_set":""
 		},
 		{"tag": "joke",
