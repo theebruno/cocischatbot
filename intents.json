@@ -24,6 +24,11 @@
 			"responses": ["Amity University is in the basement floor of Block A"],
 			"context_set":""
 		},
+		{"tag": "DICTS",
+			"patterns": ["Where do i find dicts", "is dicts here", "where is the directorate for ict support", "On what level is the directorate for ict support"],
+			"responses": ["DICTS/ Directorate for ICT Support is in the basement floor of Block A"],
+			"context_set":""
+		},
 		{"tag": "parking",
 			"patterns": ["Where do i park", "can i park here", "is it safe for me to leave my car here"],
 			"responses": ["You may park anywhere in the college except in the reserved parking spaces"],
