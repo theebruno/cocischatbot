@@ -4,6 +4,11 @@
 			"responses": ["Hello", "What's good", "Hi there", "What's up"],
 			"context_set":""
 		},
+		{"tag": "ca va",
+			"patterns": ["How are you", "How is your day", "How are you feeling"],
+			"responses": ["Its a beautiful day, the breeze is stupendous and i am feeling rather good about myself"],
+			"context_set":""
+		},
 		{"tag": "name",
 			"patterns": ["What is your name", "what should i call you", "What are you", "What do they call you"],
 			"responses": ["I am Joi an Artificially Intelligent Chatbot created to aid visitors, personnel and students of Cocis"],
