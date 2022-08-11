@@ -55,8 +55,13 @@
 			"context_set":""
 		},
 		{"tag": "toilet",
-			"patterns": ["Where is the toilet", "How can i find the toilet", "Where's the loo", "Where are the bathrooms","Where do i ease myself" ],
+			"patterns": ["Where is the toilet", "Where are the lavatories", "How can i find the toilet", "Where's the loo", "Where are the bathrooms","Where do i ease myself" ],
 			"responses": ["Find Student/visitor toilets on Block B - ground floor, 2nd and 4th levels.The rest of the levels have staff toilets."],
+			"context_set":""
+		},
+		{"tag": "help",
+			"patterns": ["What can you do", "How can i make use of you", "What should i ask", "How do i ask questions", "What kind of questions can i ask"],
+			"responses": ["I can help you with most queries you may have concerning the college. To ask a question simply type it into the text box below in the format Where is this resource..."],
 			"context_set":""
 		},
 		{"tag": "canteen",
