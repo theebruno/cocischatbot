@@ -1,15 +1,22 @@
 import random
+#for randomizing the response
 import json 
+#to be able to load the intents.json file
 import pickle
+#for serialization purposes
 import numpy as np
+#for bagging process
 import nltk
 nltk.download('punkt')
 
 from nltk.stem import WordNetLemmatizer
+#for a sort of combined tokenization and stemming
 from tensorflow.keras.models import load_model
 
 lemmatizer = WordNetLemmatizer()
+#create the lemmatizer to be used
 intents = json.loads(open('intents.json').read())
+#loading the json file for the intents
 
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))

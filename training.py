@@ -1,16 +1,24 @@
 import random
+#for randomizing the response
 import json
+#to be able to load the intents.json file
 import pickle
+#for serialization purposes
 import numpy as np
+#for bagging process
 import nltk
 
 from nltk.stem import WordNetLemmatizer
+#for a sort of combined tokenization and stemming
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Activation, Dropout
 from tensorflow.keras.optimizers import SGD
+#all the above are for creation of the neural nert model
 
 lemmatizer = WordNetLemmatizer()
+#create the lemmatizer to be used
 intents = json.loads(open('intents.json').read())
+#loading the json file for the intents
 
 words =[]
 classes = []
