@@ -9,7 +9,7 @@ import numpy as np
 import nltk
 
 from nltk.stem import WordNetLemmatizer
-#for a sort of combined tokenization and stemming
+#for a sort of refined way of stemming words that takes the root of the word and not a truncated formd
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Activation, Dropout
 from tensorflow.keras.optimizers import SGD
@@ -20,26 +20,35 @@ lemmatizer = WordNetLemmatizer()
 intents = json.loads(open('intents.json').read())
 #loading the json file for the intents
 
+#creating lists for storing the words, classes and documents
 words =[]
 classes = []
 documents = []
+#specifying which characters to ignore
 ignore_letters = ['?', '!', '.', ',']
 
+#looping through the intents
 for intent in intents['intents']:
 	for pattern in intent['patterns']:
 		word_list = nltk.word_tokenize(pattern)
+		#add tokenized words to the words list
 		words.extend(word_list)
+		#store the class to which the appended word belongs
 		documents.append((word_list, intent['tag']))
 		if intent['tag'] not in classes:
 			classes.append(intent['tag'])
 
+#lemmatizing the words
 words = [lemmatizer.lemmatize(word) for word in words if word not in ignore_letters]
+#eliminate duplicates and sort the words
 words = sorted(set(words))
 classes = sorted(set(classes))
 
+#store the lemmatized words and their classes
 pickle.dump(words, open('words.pkl', 'wb'))
 pickle.dump(classes, open('classes.pkl', 'wb'))
 
+#
 training = []
 output_empty = [0] * len(classes)
 
