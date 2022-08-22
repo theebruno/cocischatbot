@@ -259,6 +259,11 @@
 			"responses": ["When Dr. Nsabagwa is not lecturing she can be found in WIMEA labs in Block B on Level 3"],
 			"context_set":""
 		},
+		{"tag": "Geospatial Data & Computational Intelligence Lab",
+			"patterns": ["Geospatial Data & Computational Intelligence Lab", "How can i find Geospatial Data & Computational Intelligence Lab", "Where can i find Geospatial Data & Computational Intelligence Lab", "Where is Geospatial Data & Computational Intelligence Lab"],
+			"responses": [" Geospatial Data & Computational Intelligence Lab is found  in Block B on Level 3 opposite student leaders office"],
+			"context_set":""
+		},
 		{"tag": "joke",
 	        "patterns": ["tell me a joke?", "make me laugh", "say something funny" ],
 	        "responses": ["How do you make holy water? you boil the hell out of it","what kind of bees make milk instead of honey?Boobies"],
