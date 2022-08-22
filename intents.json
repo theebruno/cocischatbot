@@ -260,8 +260,13 @@
 			"context_set":""
 		},
 		{"tag": "Geospatial Data & Computational Intelligence Lab",
-			"patterns": ["Geospatial Data & Computational Intelligence Lab", "How can i find Geospatial Data & Computational Intelligence Lab", "Where can i find Geospatial Data & Computational Intelligence Lab", "Where is Geospatial Data & Computational Intelligence Lab"],
+			"patterns": ["where is Geospatial Data & Computational Intelligence Lab", "How can i find Geospatial Data & Computational Intelligence Lab", "Where can i find Geospatial Data & Computational Intelligence Lab", "Where is Geospatial Data & Computational Intelligence Lab"],
 			"responses": [" Geospatial Data & Computational Intelligence Lab is found  in Block B on Level 3 opposite student leaders office"],
+			"context_set":""
+		},
+		{"tag": "Phd office",
+			"patterns": ["where is Phd office", "How can i Phd office", "Where can i find Phd office", "Where is Phd office"],
+			"responses": [" GPhd office is found  in Block B on Level 3 opposite student leaders office"],
 			"context_set":""
 		},
 		{"tag": "joke",
