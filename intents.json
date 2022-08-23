@@ -265,15 +265,181 @@
 			"context_set":""
 		},
 		{"tag": "Phd office",
-			"patterns": ["where is Phd office", "How can i Phd office", "Where can i find Phd office", "Where is Phd office"],
+			"patterns": ["where is Phd office", "How can i  find Phd office", "Where can i find Phd office", "Where is Phd office"],
 			"responses": [" GPhd office is found  in Block B on Level 3 opposite student leaders office"],
 			"context_set":""
 		},
+		{"tag": "School Registrars Office",
+		"patterns": ["where is School Registrars Office", "How can i  find School Registrars Office", "Where can i find School Registrars Office", "Where is School Registrars Office"],
+		"responses": [" School Registrars Office is found  in Block C on Level 1 room F-1"],
+		"context_set":""
+	    },
+		{"tag": "Ladies staff toilets",
+		"patterns": ["where is Ladies staff toilet", "How can i  find Ladies staff toilet", "Where can i find Ladies staff toilet", "Where is Ladies staff toilet"],
+		"responses": [" Ladies staff toilet is found  in Block C on Level 1 near  room F-1"],
+		"context_set":""
+	    },
+		{"tag": "HOD-Library AND Information Science",
+		"patterns": ["where is HOD-Library AND Information Science", "How can i  find HOD-Library AND Information Science", "Where can i find HOD-Library AND Information Science", "Where is HOD-Library AND Information Science"],
+		"responses": [" HOD-Library AND Information Science is found  in Block C on Level 1 after  room F-1"],
+		"context_set":""
+	    },
+		{"tag": "Coordinator for Research and Graduate Training",
+		"patterns": ["where is Coordinator for Research and Graduate Training", "How can i  find Coordinator for Research and Graduate Training", "Where can i find Coordinator for Research and Graduate Training", "Where is Coordinator for Research and Graduate Training"],
+		"responses": [" Coordinator for Research and Graduate Training is found  in Block C on Level 1 after  HOD-Library AND Information Science"],
+		"context_set":""
+	    },
+		{"tag": "Professor ELISAM MAGARA",
+		"patterns": ["where is Professor ELISAM MAGARA", "How can i  find Professor ELISAM MAGARA", "Where can i find Professor ELISAM MAGARA", "Where is Professor ELISAM MAGARA"],
+		"responses": [" Professor ELISAM MAGARA is found  in Block C on Level 1  in Department of Records & Archieves Management F-2 first office"],
+		"context_set":""
+	    },
+		{"tag": "Dr.CLEMENT LUTAAYA",
+		"patterns": ["where is Dr.CLEMENT LUTAAYA", "How can i  find Dr.CLEMENT LUTAAYA", "Where can i find Dr.CLEMENT LUTAAYA", "Where is Dr.CLEMENT LUTAAYA"],
+		"responses": [" Dr.CLEMENT LUTAAYA is found  in Block C on Level 1 in  Department of Library & Information Sciences F-2 second  office"],
+		"context_set":""
+	    },
+		{"tag": "MS.SYLVIA NAMUSUZI",
+		"patterns": ["where is MS.SYLVIA NAMUSUZI", "How can i  find MS.SYLVIA NAMUSUZI", "Where can i find MS.SYLVIA NAMUSUZI", "Where is MS.SYLVIA NAMUSUZI"],
+		"responses": [" MS.SYLVIA NAMUSUZI is found  in Block C on Level 1 in  Department of Records & Archieves Management F-2 second  office"],
+		"context_set":""
+	    },
+		{"tag": "Lecture room1",
+		"patterns": ["where is Lecture room1", "How can i  find Lecture room1", "Where can i find Lecture room1", "Where is Lecture room1"],
+		"responses": ["Lecture room1 is found  in Block C on Level 1 "],
+		"context_set":""
+	    },
+		{"tag": "Dr.NALUMANSI",
+		"patterns": ["where is Dr.NALUMANSI", "How can i  find Dr.NALUMANSI", "Where can i find Dr.NALUMANSI", "Where is Dr.NALUMANSI"],
+		"responses": ["Dr.NALUMANSI is found  in Block C on Level 1  F-3 when she is not lecturing"],
+		"context_set":""
+	    },
+		{"tag": "Dr.NALUMANSI",
+		"patterns": ["where is Dr.NALUMANSI", "How can i  find Dr.NALUMANSI", "Where can i find Dr.NALUMANSI", "Where is Dr.NALUMANSI"],
+		"responses": ["Dr.NALUMANSI is found  in Block C on Level 1  F-3 when she is not lecturing"],
+		"context_set":""
+	    },
+		{"tag": "Associate Professor Dr.David Luyombya",
+		"patterns": ["where is Associate Professor Dr.David Luyombya", "How can i  find Associate Professor Dr.David Luyombya", "Where can i find Associate Professor Dr.David Luyombya", "Where is Associate Professor Dr.David Luyombya"],
+		"responses": ["Associate Professor Dr.David Luyombya is found  in Block C on Level 1  in the HOD Records and archives Management office"],
+		"context_set":""
+	    },
+		{"tag": "Gent's staff toilets",
+		"patterns": ["where is Gent's staff toilets", "How can i  find Gent's staff toilets", "Where can i find Gent's staff toilets", "Where is Gent's staff toilets"],
+		"responses": [" Gent's staff toilets is found  in Block C on Level 1 first floor"],
+		"context_set":""
+	    },
+		{"tag": "Graduate Board Room",
+		"patterns": ["where is Graduate Board Room", "How can i  find Graduate Board Room", "Where can i find Graduate Board Room", "Where is Graduate Board Room"],
+		"responses": [" Graduate Board Room is found  in Block C on Level 2 near Graduate Board Room "],
+		"context_set":""
+	    },
+		{"tag": "Library Administrator",
+		"patterns": ["where is Library Administrator", "How can i  find Library Administrator", "Where can i find Library Administrator", "Where is Library Administrator"],
+		"responses": ["Library Administrator is found  in Block C on Level 2  first office in the school library"],
+		"context_set":""
+	    },
+		{"tag": "School Library",
+		"patterns": ["where is School Library", "How can i  find School Library", "Where can i find School Library", "Where is School Library"],
+		"responses": ["School Library is found  in Block C on Level 2"],
+		"context_set":""
+	    },
+		{"tag": "School Library",
+		"patterns": ["where is School Library", "How can i  find School Library", "Where can i find School Library", "Where is School Library"],
+		"responses": ["School Library is found  in Block C on Level 2"],
+		"context_set":""
+	    },
+		{"tag": "Dean EASLIS",
+		"patterns": ["where is Dean EASLIS", "How can i  find Dean EASLIS", "Where can i find Dean EASLIS", "Where is Dean EASLIS"],
+		"responses": ["Dean  of EASLIS is found  in Block C on Level 2   room F-6 "],
+		"context_set":""
+	    },
+		{"tag": "Administrative Assistant",
+		"patterns": ["where is Administrative Assistant", "How can i  find Administrative Assistant", "Where can i find Administrative Assistant", "Where is Administrative Assistant"],
+		"responses": ["Administrative Assistant is found  in Block C on Level 2   room F-6 "],
+		"context_set":""
+	    },
+		{"tag": "Registrary",
+		"patterns": ["where is Registrary", "How can i  find Registrary", "Where can i find Registrary", "Where is Registrary"],
+		"responses": ["Registrary is found  in Block C on Level 2    near room F-6 "],
+		"context_set":""
+	    },
+		{"tag": "Examination Coordinator",
+		"patterns": ["where is Examination Coordinator", "How can i  find Examination Coordinator", "Where can i find Examination Coordinator", "Where is Examination Coordinator"],
+		"responses": ["Examination Coordinator is found  in Block C on Level 2    room F-4 "],
+		"context_set":""
+	    },
+		{"tag": "Projects Office",
+		"patterns": ["where is Projects Office", "How can i  find Projects Office", "Where can i find Projects Office", "Where is Projects Office"],
+		"responses": ["Projects Office is found  in Block C on Level 2    room F-5"],
+		"context_set":""
+	    },
+		{"tag": "Seminar room EASLIS",
+		"patterns": ["where is Seminar room EASLIS", "How can i  find Seminar room EASLIS", "Where can i find Seminar room EASLIS", "Where is Seminar room EASLIS"],
+		"responses": ["Seminar room EASLIS is found  in Block C on Level 2   near  room F-5"],
+		"context_set":""
+	    },
+		{"tag": "Lecture room IV",
+		"patterns": ["where is Lecture room IV", "How can i  find Lecture room IV", "Where can i find Lecture room IV", "Where is Lecture room IV"],
+		"responses": ["Lecture room IV is found  in Block C in the basement (ground floor)"],
+		"context_set":""
+	    },
+		{"tag": "Store",
+		"patterns": ["where is Store", "How can i  find Store", "Where can i find Store", "Where is Store"],
+		"responses": ["Store is found  in Block C in the basement (ground floor) "],
+		"context_set":""
+	    },
+		{"tag": "Mulissa Office",
+		"patterns": ["where is Mulissa Office", "How can i  find Mulissa Office", "Where can i find Mulissa Office", "Where is Mulissa Office"],
+		"responses": ["Mulissa Office is found  in Block C in the basement (ground floor) first office after the steps"],
+		"context_set":""
+	    },
+		{"tag": "Student Toilets",
+		"patterns": ["where is Student Toilets", "How can i  find Student Toilets", "Where can i find Student Toilets", "Where is Student Toilets"],
+		"responses": ["Student Toilets is found  in Block C in the basement (ground floor)"],
+		"context_set":""
+	    },
+		{"tag": "KIDAAGA JOSHUA JUSTIN",
+		"patterns": ["where is KIDAAGA JOSHUA JUSTIN", "How can i  find KIDAAGA JOSHUA JUSTIN", "Where can i find KIDAAGA JOSHUA JUSTIN", "Where is KIDAAGA JOSHUA JUSTIN"],
+		"responses": ["KIDAAGA JOSHUA JUSTIN is found  in Block C in the basement (ground floor) in room G-3"],
+		"context_set":""
+	    },
+		{"tag": "MS.MUZAKI FARIDAH",
+		"patterns": ["where is MS.MUZAKI FARIDAH", "How can i  find MS.MUZAKI FARIDAH", "Where can i find MS.MUZAKI FARIDAH", "Where is MS.MUZAKI FARIDAH"],
+		"responses": ["MS.MUZAKI FARIDAH is found  in Block C in the basement (ground floor) in room  G-3"],
+		"context_set":""
+	    },
+		{"tag": "FRANCIS EKWARO",
+		"patterns": ["where is FRANCIS EKWARO", "How can i  find FRANCIS EKWARO", "Where can i find FRANCIS EKWARO", "Where is FRANCIS EKWARO"],
+		"responses": ["FRANCIS EKWARO is found  in Block C in the basement (ground floor) in Department of Records & Archieves management room G-2"],
+		"context_set":""
+	    },
+		{"tag": "NANKYA",
+		"patterns": ["where is NANKYA", "How can i  find NANKYA", "Where can i find NANKYA", "Where is NANKYA"],
+		"responses": ["NANKYA is found  in Block C in the basement (ground floor) in room G-1"],
+		"context_set":""
+	    },
+		{"tag": "Computer lab",
+		"patterns": ["where is Computer lab", "How can i  find Computer lab", "Where can i find Computer lab", "Where is Computer lab"],
+		"responses": ["Computer lab is found  in Block C in the basement (ground floor) near room G-1"],
+		"context_set":""
+	    },
+		{"tag": "Systems Administration",
+		"patterns": ["where is Systems Administration", "How can i  find Systems Administration", "Where can i find Systems Administration", "Where is Systems Administration"],
+		"responses": ["Systems Administration is found  in Block C in the basement (ground floor) near Computer lab"],
+		"context_set":""
+	    },
+		{"tag": "Custodian's office EASLIS",
+		"patterns": ["where is Custodian's office EASLIS", "How can i  find Custodian's office EASLIS", "Where can i find Custodian's office EASLIS", "Where is Custodian's office EASLIS"],
+		"responses": ["Custodian's office EASLIS is found  in Block C in the level 1  first office as you enter the building"],
+		"context_set":""
+	    },
 		{"tag": "joke",
 	        "patterns": ["tell me a joke?", "make me laugh", "say something funny" ],
 	        "responses": ["How do you make holy water? you boil the hell out of it","what kind of bees make milk instead of honey?Boobies"],
 		 	"context_set": ""
 		},
+		
 		{"tag": "bye",
 			"patterns": ["see you", "goodbye", "later", "sayonara"],
 			"responses": ["bye", "see you", "goodbye"],
