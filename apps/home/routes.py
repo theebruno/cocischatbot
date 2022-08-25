@@ -1,8 +1,3 @@
-# -*- encoding: utf-8 -*-
-"""
-Copyright (c) 2019 - present AppSeed.us
-"""
-
 from apps.home import blueprint
 from flask import render_template, request
 from flask_login import login_required
@@ -12,7 +7,6 @@ from jinja2 import TemplateNotFound
 @blueprint.route('/index')
 @login_required
 def index():
-
     return render_template('home/index.html', segment='index')
 
 
@@ -21,7 +15,6 @@ def index():
 def route_template(template):
 
     try:
-
         if not template.endswith('.html'):
             template += '.html'
 
@@ -40,13 +33,24 @@ def route_template(template):
 
 # Helper - Extract current page name from request
 def get_segment(request):
-
     try:
-
         segment = request.path.split('/')[-1]
 
         if segment == '':
             segment = 'index'
+
+        return segment
+
+    except:
+        return None
+
+
+def get_segment(request):
+    try:
+        segment = request.path.split('/lecturers')
+
+        if segment == '':
+            segment = 'lecturers'
 
         return segment
 
