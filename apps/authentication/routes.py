@@ -1,8 +1,3 @@
-# -*- encoding: utf-8 -*-
-"""
-Copyright (c) 2019 - present AppSeed.us
-"""
-
 from flask import render_template,jsonify, redirect, request, url_for
 from flask_login import (
     current_user,
@@ -14,7 +9,6 @@ from apps import db, login_manager
 from apps.authentication import blueprint
 from apps.authentication.forms import LoginForm, CreateAccountForm
 from apps.authentication.models import Users
-
 from apps.authentication.util import verify_pass
 
 #importing ai related packages
@@ -34,7 +28,6 @@ def route_default():
 
 
 # Login & Registration
-
 @blueprint.route('/login', methods=['GET', 'POST'])
 def login():
     login_form = LoginForm(request.form)
@@ -67,12 +60,12 @@ def login():
 @blueprint.route('/register', methods=['GET', 'POST'])
 def register():
     create_account_form = CreateAccountForm(request.form)
-    if 'register' in request.form:
 
+    if 'register' in request.form:
         username = request.form['username']
         email = request.form['email']
 
-        # Check usename exists
+        # Check if username exists
         user = Users.query.filter_by(username=username).first()
         if user:
             return render_template('accounts/register.html',
@@ -109,7 +102,6 @@ def logout():
 
 
 # Errors
-
 @login_manager.unauthorized_handler
 def unauthorized_handler():
     return render_template('home/page-403.html'), 403
@@ -129,6 +121,7 @@ def not_found_error(error):
 def internal_error(error):
     return render_template('home/page-500.html'), 500
 
+
 @blueprint.route('/getmsg/', methods=['GET'])
 def respond():
     # Retrieve the name from url parameter
@@ -136,8 +129,9 @@ def respond():
     ints = predict_class(name)
     res = get_response(ints, intents)
     return jsonify({"response" : res})
-    
-#addding ai module
+
+
+# adding ai module
 lemmatizer = WordNetLemmatizer()
 intents = json.loads(open('intents.json').read())
 
@@ -145,41 +139,48 @@ words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
 model = load_model('chatbotmodel.h5')
 
+
 def clean_up_sentence(sentence):
-	sentence_words = nltk.word_tokenize(sentence)
-	sentence_words = [lemmatizer.lemmatize(word) for word in sentence_words]
-	return sentence_words
+    sentence_words = nltk.word_tokenize(sentence)
+    sentence_words = [lemmatizer.lemmatize(word) for word in sentence_words]
+    return sentence_words
 
 
 def bag_of_words(sentence):
-	sentence_words = clean_up_sentence(sentence)
-	bag = [0] * len(words)
-	for w in sentence_words:
-		for i, word in enumerate(words):
-			if word == w:
-				bag[i] = 1
-	return np.array(bag)
+    sentence_words = clean_up_sentence(sentence)
+    bag = [0] * len(words)
+
+    for w in sentence_words:
+        for i, word in enumerate(words):
+            if word == w:
+                bag[i] = 1
+
+    return np.array(bag)
+
 
 def predict_class(sentence):
-	bow = bag_of_words(sentence)
-	res = model.predict(np.array([bow]))[0]
-	ERROR_THRESHOLD = 0.25
-	results = [[i,r] for i, r in enumerate(res) if r > ERROR_THRESHOLD]
+    bow = bag_of_words(sentence)
+    res = model.predict(np.array([bow]))[0]
+    ERROR_THRESHOLD = 0.25
+    results = [[i,r] for i, r in enumerate(res) if r > ERROR_THRESHOLD]
 
-	results.sort(key=lambda x: x[1], reverse=True)
-	return_list = []
-	for r in results:
-		return_list.append({'intent': classes[r[0]], 'probability': str(r[1])})
-	return return_list
+    results.sort(key=lambda x: x[1], reverse=True)
+    return_list = []
+    for r in results:
+        return_list.append({'intent': classes[r[0]], 'probability': str(r[1])})
+    return return_list
+
 
 def get_response(intents_list, intents_json):
-	tag= intents_list[0]['intent']
-	list_of_intents = intents_json['intents']
-	for i in list_of_intents:
-		if i['tag'] == tag:
-			result = random.choice(i['responses'])
-			break
-	return result
+    tag = intents_list[0]['intent']
+    list_of_intents = intents_json['intents']
 
-print("Chatbot is now active")       
-    
+    for i in list_of_intents:
+        if i['tag'] == tag:
+            result = random.choice(i['responses'])
+            break
+    return result
+
+
+print("Chatbot is now active")
+
