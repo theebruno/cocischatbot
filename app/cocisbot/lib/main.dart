@@ -51,31 +51,19 @@ return Scaffold(
               return _buildItem(_data[index], animation, index);
             }
           ),
-           SizedBox(
-                height: 300,
-              ),
+           
           MessageBar(
             onSend: (msg) => this._getResponse(msg),
             actions: [
               InkWell(
                 child: Icon(
-                  Icons.add,
+                  Icons.mic,
                   color: Colors.black,
                   size: 24,
                 ),
                 onTap: () {},
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 8, right: 8),
-                child: InkWell(
-                  child: Icon(
-                    Icons.camera_alt,
-                    color: Colors.green,
-                    size: 24,
-                  ),
-                  onTap: () {},
-                ),
-              ),
+              )
+              
             ],
           ),
         ],

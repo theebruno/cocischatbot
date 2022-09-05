@@ -1,5 +1,11 @@
 import nltk
 from nltk.stem.lancaster import LancasterStemmer
+from flask import Flask, escape, request
+
+app = Flask(__name__)
+# app.config['SECRET_KEY'] = 'any secret key'
+
+
 stemmer = LancasterStemmer()
 
 import numpy
