@@ -70,7 +70,7 @@
 			"context_set":""
 		},
 		{"tag": "canteen",
-			"patterns": ["Where is the canteen", "where do i get a meal", "say where is me lunch", "How can i find the canteen", "Where can i get a bite to eat","Where can i buy lunch" ],
+			"patterns": ["Where is the canteen", "where can i get something to eat", "where do i get a meal", "say where is me lunch", "How can i find the canteen", "Where can i get a bite to eat","Where can i buy lunch" ],
 			"responses": ["The canteen is located on the ground floor of Block B"],
 			"context_set":""
 		},
