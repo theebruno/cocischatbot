@@ -42,3 +42,14 @@ def create_app(config):
     register_blueprints(app)
     configure_database(app)
     return app
+
+
+def create_app():
+    app = ...
+    # existing code omitted
+
+    from . import lecturers
+    app.register_blueprint(lecturers.bp)
+    app.add_url_rule('/', endpoint='index')
+
+    return app
