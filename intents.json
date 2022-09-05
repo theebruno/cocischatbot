@@ -55,32 +55,32 @@
 			"context_set":""
 		},
 		{"tag": "printery",
-			"patterns": ["Where is the printery", "How can i find the printery" ],
+			"patterns": ["Where is the printery", "How can i find the printery", "where do i print from", "where can i print"],
 			"responses": ["The Printeries can be found on the ground floor and 1st floor of Block B"],
 			"context_set":""
 		},
 		{"tag": "toilet",
-			"patterns": ["Where is the toilet", "Where are the lavatories", "How can i find the toilet", "Where's the loo", "Where are the bathrooms","Where do i ease myself" ],
+			"patterns": ["Where is the toilet", "Where are the lavatories", "where do i go to tinkle", "How can i find the toilet", "Where's the loo", "Where are the bathrooms","Where do i ease myself" ],
 			"responses": ["Find Student/visitor toilets on Block B - ground floor, 2nd and 4th levels.The rest of the levels have staff toilets."],
 			"context_set":""
 		},
 		{"tag": "help",
-			"patterns": ["What can you do", "How can i make use of you", "What should i ask", "How do i ask questions", "What kind of questions can i ask"],
-			"responses": ["I can help you with most queries you may have concerning the college. To ask a question simply type it into the text box below in the format Where is this resource..."],
+			"patterns": ["What can you do", "How can i make use of you", "how can you help me",  "What should i ask", "How do i ask questions", "What kind of questions can i ask"],
+			"responses": ["I can help you with most queries you may have concerning the college. To ask a question simply type it into the text box below in the format Where is this resource... oh and try to spell things correctly am not yet that intelligent"],
 			"context_set":""
 		},
 		{"tag": "canteen",
-			"patterns": ["Where is the canteen", "How can i find the canteen", "Where can i get a bite to eat","Where can i buy lunch" ],
+			"patterns": ["Where is the canteen", "where do i get a meal", "say where is me lunch", "How can i find the canteen", "Where can i get a bite to eat","Where can i buy lunch" ],
 			"responses": ["The canteen is located on the ground floor of Block B"],
 			"context_set":""
 		},
 		{"tag": "GIS Lab",
-			"patterns": ["Where is the GIS lab", "How can i find the geography students", "Where can i find the meteorology department"],
+			"patterns": ["Where is the GIS lab", "gis is where", "on which level is the gis lab", "How can i find the geography students", "Where can i find the meteorology department"],
 			"responses": ["The GIS Lab is located on the ground floor of Block A"],
 			"context_set":""
 		},
 		{"tag": "Procurements",
-			"patterns": ["Where is the procurements office", "How can i find the accountant", "Where can i find the huawei samrt classroom","Where can i find procurements" ],
+			"patterns": ["Where is the procurements office", "where's procurements", "How can i find the accountant", "Where can i find the huawei samrt classroom","Where can i find procurements" ],
 			"responses": ["Level 2 of Block A has the Procurement and Accounts offices as well as a Huawei smart classroom"],
 			"context_set":""
 		},
@@ -120,7 +120,7 @@
 			"context_set":""
 		},
 		{"tag": "Pearson",
-			"patterns": ["Where is the Pearson gmat east african centre for US International certfications", "How can i get my Pearson certificate", "Where can i find the certfications office","Where do i pick my US certificate"],
+			"patterns": ["Where is the Pearson gmat east african centre for US International certfications", "where is pearson", "where is gmat", "How can i get my Pearson certificate", "Where can i find the certfications office","Where do i pick my US certificate"],
 			"responses": ["The Pearson GMAT East African center for US international certifications can be found on level 6 of Block A"],
 			"context_set":""
 		},
@@ -130,7 +130,7 @@
 			"context_set":""
 		},
 		{"tag": "LLB",
-			"patterns": ["Where is the LLB1", "How can i find LLB2", "Where can i find LLB3", "on which level is LLB4", "How do i get to LLB5", "Where is LLB6 located"],
+			"patterns": ["Where is the llb1", "where is llb1", "where is llb2", "How can i find LLB2", "Where can i find LLB3", "on which level is LLB4", "How do i get to LLB5", "Where is LLB6 located"],
 			"responses": ["The lecture theatres are on the level that corresponds to the last numberin their names e.g LLB1 on level 1 LLB2 on level 2 etc."],
 			"context_set":""
 		},
@@ -185,7 +185,7 @@
 			"context_set":""
 		},
 		{"tag": "AirQo",
-			"patterns": ["Where are the  AirQo offices", "How can i find the AirQo office", "Where can i find the room for AirQo", "Where can i find AirQo"],
+			"patterns": ["Where are the  AirQo offices", "How can i find the AirQo office", "Where can i find the room for AirQo", "where is airqo","Where can i find AirQo"],
 			"responses": ["AirQo is on Level 3 of Block B"],
 			"context_set":""
 		},
@@ -390,7 +390,7 @@
 		"context_set":""
 	    },
 		{"tag": "Mulissa Office",
-		"patterns": ["where is Mulissa Office", "How can i  find Mulissa Office", "Where can i find Mulissa Office", "Where is Mulissa Office"],
+		"patterns": ["where is Mulissa Office", "where is mulissa", "How can i  find Mulissa Office", "Where can i find Mulissa Office", "Where is Mulissa Office"],
 		"responses": ["Mulissa Office is found  in Block C in the basement (ground floor) first office after the steps"],
 		"context_set":""
 	    },
@@ -405,7 +405,7 @@
 		"context_set":""
 	    },
 		{"tag": "MS.MUZAKI FARIDAH",
-		"patterns": ["where is MS.MUZAKI FARIDAH", "How can i  find MS.MUZAKI FARIDAH", "Where can i find MS.MUZAKI FARIDAH", "Where is MS.MUZAKI FARIDAH"],
+		"patterns": ["where is MS.MUZAKI FARIDAH", "where is muzaki faridah", "How can i  find MS.MUZAKI FARIDAH", "Where can i find MS.MUZAKI FARIDAH", "Where is MS.MUZAKI FARIDAH"],
 		"responses": ["MS.MUZAKI FARIDAH is found  in Block C in the basement (ground floor) in room  G-3"],
 		"context_set":""
 	    },
@@ -415,7 +415,7 @@
 		"context_set":""
 	    },
 		{"tag": "NANKYA",
-		"patterns": ["where is NANKYA", "How can i  find NANKYA", "Where can i find NANKYA", "Where is NANKYA"],
+		"patterns": ["where is nankya", "How can i  find NANKYA", "Where can i find NANKYA", "Where is NANKYA"],
 		"responses": ["NANKYA is found  in Block C in the basement (ground floor) in room G-1"],
 		"context_set":""
 	    },
