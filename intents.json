@@ -396,7 +396,7 @@
 	    },
 		{"tag": "Student Toilets",
 		"patterns": ["where is Student Toilets", "How can i  find Student Toilets", "Where can i find Student Toilets", "Where is Student Toilets"],
-		"responses": ["Student Toilets is found  in Block C in the basement (ground floor)"],
+		"responses": ["Student Toilets are  found  in Block C in the basement (ground floor)"],
 		"context_set":""
 	    },
 		{"tag": "KIDAAGA JOSHUA JUSTIN",
