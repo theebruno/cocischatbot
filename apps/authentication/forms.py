@@ -3,29 +3,58 @@
 Copyright (c) 2019 - present AppSeed.us
 """
 
-from flask_wtf import FlaskForm
-from wtforms import TextField, PasswordField
-from wtforms.validators import Email, DataRequired
-
-# login and registration
+from django import forms
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 
 
-class LoginForm(FlaskForm):
-    username = TextField('Username',
-                         id='username_login',
-                         validators=[DataRequired()])
-    password = PasswordField('Password',
-                             id='pwd_login',
-                             validators=[DataRequired()])
+class LoginForm(forms.Form):
+    username = forms.CharField(
+        widget=forms.TextInput(
+            attrs={
+                "placeholder": "Username",
+                "class": "form-control"
+            }
+        ))
+    password = forms.CharField(
+        widget=forms.PasswordInput(
+            attrs={
+                "placeholder": "Password",
+                "class": "form-control"
+            }
+        ))
 
 
-class CreateAccountForm(FlaskForm):
-    username = TextField('Username',
-                         id='username_create',
-                         validators=[DataRequired()])
-    email = TextField('Email',
-                      id='email_create',
-                      validators=[DataRequired(), Email()])
-    password = PasswordField('Password',
-                             id='pwd_create',
-                             validators=[DataRequired()])
+class SignUpForm(UserCreationForm):
+    username = forms.CharField(
+        widget=forms.TextInput(
+            attrs={
+                "placeholder": "Username",
+                "class": "form-control"
+            }
+        ))
+    email = forms.EmailField(
+        widget=forms.EmailInput(
+            attrs={
+                "placeholder": "Email",
+                "class": "form-control"
+            }
+        ))
+    password1 = forms.CharField(
+        widget=forms.PasswordInput(
+            attrs={
+                "placeholder": "Password",
+                "class": "form-control"
+            }
+        ))
+    password2 = forms.CharField(
+        widget=forms.PasswordInput(
+            attrs={
+                "placeholder": "Password check",
+                "class": "form-control"
+            }
+        ))
+
+    class Meta:
+        model = User
+        fields = ('username', 'email', 'password1', 'password2')
