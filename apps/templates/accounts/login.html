@@ -1,6 +1,6 @@
 {% extends "layouts/base.html" %}
 
-{% block title %} Login {% endblock %} 
+{% block title %} Login {% endblock %}
 
 <!-- Specific Page CSS goes HERE  -->
 {% block stylesheets %}{% endblock stylesheets %}
@@ -8,11 +8,11 @@
 {% block content %}
 
   <div class="row">
-    <div class="col-md-5">
+    <div class="col-md-5 offset-2">
       <div class="card">
         <div class="card-header card-header-primary">
           <h4 class="card-title">
-            Login
+            CoCIS Chatbot Lecturer Web Login
           </h4>
         </div>
         <div class="card-body">
@@ -24,13 +24,10 @@
                   Add your credentials
               {% endif %}  
           </h6>
-          
-          <br />
+          <br/>
 
           <form role="form" method="post" action="">
-              
-            {% csrf_token %} 
-
+            {% csrf_token %}
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group">
@@ -39,8 +36,8 @@
                 </div>
               </div>
             </div>
-
-            <br />
+              <span class="text-danger">{{ form.username.errors }}</span>
+            <br/>
 
             <div class="row">
               <div class="col-md-12">
@@ -50,14 +47,15 @@
                 </div>
               </div>
             </div>
+              <span class="text-danger">{{ form.password.errors }}</span>
 
-            <br />
+            <br/>
 
             <button type="submit" name="login" class="btn btn-primary pull-left">Login</button>
 
             &nbsp; &nbsp; 
             <span class="pull-right">
-              Don't have an account? <a href="{% url 'register' %}" class="text-primary">Create</a>
+              Don't have an account? <a href="{% url 'register' %}" class="text-primary">Signup</a>
             </span>
 
             <div class="clearfix"></div>

@@ -1,11 +1,12 @@
-# -*- encoding: utf-8 -*-
 """
-Copyright (c) 2019 - present AppSeed.us
 """
-
 import os
 from decouple import config
 from unipath import Path
+
+# from django.core.urlresolvers import reverse_lazy
+
+from django.shortcuts import redirect, reverse
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = Path(__file__).parent
@@ -29,7 +30,21 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.home'  # Enable the inner home (home)
+
+    # 3rd party
+    'thumbnails',
+
+
+    # MY APPS
+    'apps.accounts',
+    'apps.profiles',
+    'apps.home',
+    'apps.courses',
+    'apps.lecturer_offices',
+    'apps.departments',
+    'apps.course_units',
+    'apps.class_timetables',
+    'apps.exam_timetables',
 ]
 
 MIDDLEWARE = [
@@ -44,8 +59,11 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'core.urls'
+
 LOGIN_REDIRECT_URL = "home"  # Route defined in home/urls.py
+
 LOGOUT_REDIRECT_URL = "home"  # Route defined in home/urls.py
+
 TEMPLATE_DIR = os.path.join(CORE_DIR, "apps/templates")  # ROOT dir for templates
 
 TEMPLATES = [
@@ -99,7 +117,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+# TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Kampala'
 
 USE_I18N = True
 
@@ -120,6 +139,46 @@ STATICFILES_DIRS = (
     os.path.join(CORE_DIR, 'apps/static'),
 )
 
+# EMAIL_HOST = 'smtp.email-host-provider-domain.com'
+EMAIL_HOST = 'localhost'
 
-#############################################################
-#############################################################
+# EMAIL_HOST_USER = 'yourusername@youremail.com'
+
+# EMAIL_HOST_PASSWORD = 'your password'
+
+EMAIL_PORT = 1025
+
+# EMAIL_USE_TLS = True
+
+# DEFAULT_FROM_EMAIL = 'theyuserteam@internet.com'
+
+# ADMINS = (
+#     ('You', 'you@email.com'),
+# )
+
+# MANAGERS = ADMINS
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+# For Bootstrap 3, change error alert to 'danger'
+
+from django.contrib import messages
+
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}
+
+# # Authentication Settings
+# AUTH_USER_MODEL = 'authtools.User'
+
+LOGIN_URL = "login"
+
+# LOGIN_URL = reverse("accounts:login")
+
+THUMBNAIL_EXTENSION = 'png'  # Or any extn for your thumbnails
+
+LOGIN_EXEMPT_URLS = (  # urls a user can access while they are logged out
+    'account/signup/',
+)
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

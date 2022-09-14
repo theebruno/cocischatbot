@@ -8,11 +8,11 @@
 {% block content %}
 
   <div class="row">
-    <div class="col-md-5">
+    <div class="col-md-5 offset-2">
       <div class="card">
         <div class="card-header card-header-primary">
           <h4 class="card-title">
-            Create Account
+            Register as a Lecturer
           </h4>
         </div>
         <div class="card-body">
@@ -77,14 +77,14 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group">
-                    <label class="bmd-label-floating">Password Check</label>
+                    <label class="bmd-label-floating">Password Confirmation</label>
                     {{ form.password2 }}
                   </div>
                 </div>
               </div>
               <span class="text-danger">{{ form.password2.errors }}</span>
 
-              <br />
+              <br/>
 
               <button type="submit" name="register" class="btn btn-primary pull-left">Register</button>
 

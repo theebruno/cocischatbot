@@ -1,12 +1,13 @@
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="/static/assets/img/sidebar-1.jpg">
       <div class="logo">
-        <a target="_blank" rel="noopener noreferrer" 
+        <a target="_blank" rel="noopener noreferrer"
            href="https://appseed.us/admin-dashboards/django-dashboard-material" class="simple-text logo-normal">
-          Django Material
+          CoCIS Chatbot Web
         </a>
       </div>
       <div class="sidebar-wrapper">
         <ul class="nav">
+
         {% if request.user.is_authenticated %}
 
           <li class="nav-item {% if 'index' in segment %} active {% endif %}">
@@ -15,47 +16,32 @@
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item {% if 'page-user' in segment %} active {% endif %}">
-            <a class="nav-link" href="/page-user.html">
+
+          <li class="nav-item {% if 'course_list' in segment %} active {% endif %}">
+            <a class="nav-link" href="{% url 'courses' %}">
+              <i class="material-icons">content_paste</i>
+              <p>Courses</p>
+            </a>
+          </li>
+
+          <li class="nav-item {% if 'class_timetables' in segment %} active {% endif %}">
+            <a class="nav-link" href="{% url 'class_timetables' %}">
+              <i class="material-icons">content_paste</i>
+              <p>Class Timetables</p>
+            </a>
+          </li>
+
+          <li class="nav-item {% if 'exam_timetables' in segment %} active {% endif %}">
+            <a class="nav-link" href="{% url 'exam_timetables' %}">
+              <i class="material-icons">content_paste</i>
+              <p>Exam Timetables</p>
+            </a>
+          </li>
+
+          <li class="nav-item {% if 'profile' in segment %} active {% endif %}">
+            <a class="nav-link" href="{% url 'show_self' %}">
               <i class="material-icons">person</i>
               <p>User Profile</p>
-            </a>
-          </li>
-          <li class="nav-item {% if 'ui-tables' in segment %} active {% endif %}">
-            <a class="nav-link" href="/ui-tables.html">
-              <i class="material-icons">content_paste</i>
-              <p>Table List</p>
-            </a>
-          </li>
-          <li class="nav-item {% if 'ui-typography' in segment %} active {% endif %}">
-            <a class="nav-link" href="/ui-typography.html">
-              <i class="material-icons">library_books</i>
-              <p>Typography</p>
-            </a>
-          </li>
-          <li class="nav-item {% if 'ui-icons' in segment %} active {% endif %}">
-            <a class="nav-link" href="/ui-icons.html">
-              <i class="material-icons">bubble_chart</i>
-              <p>Icons</p>
-            </a>
-          </li>
-          <li class="nav-item {% if 'ui-maps' in segment %} active {% endif %}">
-            <a class="nav-link" href="/ui-maps.html">
-              <i class="material-icons">location_ons</i>
-              <p>Maps</p>
-            </a>
-          </li>
-          <li class="nav-item {% if 'ui-notifications' in segment %} active {% endif %}">
-            <a class="nav-link" href="/ui-notifications.html">
-              <i class="material-icons">notifications</i>
-              <p>Notifications</p>
-            </a>
-          </li>
-          
-          <li class="nav-item ">
-            <a class="nav-link" href="/page-rtl-support.html">
-              <i class="material-icons">language</i>
-              <p>RTL Support</p>
             </a>
           </li>
 
@@ -66,25 +52,6 @@
             </a>
           </li>
 
-          <li class="nav-item active-pro ">
-            <a class="nav-link" 
-               target="_blank" rel="noopener noreferrer"  
-               href="https://appseed.us/admin-dashboards/django-dashboard-material-pro">
-              <i class="material-icons">unarchive</i>
-              <p>PRO Version</p>
-            </a>
-          </li>
-
-        {% else %}
-
-          <li class="nav-item active">
-            <a class="nav-link" 
-               target="_blank" rel="noopener noreferrer"  
-               href="https://appseed.us/admin-dashboards/django-dashboard-material-pro">
-              <i class="material-icons">unarchive</i>
-              <p>PRO Version</p>
-            </a>
-          </li>          
 
         {% endif %}
         </ul>
