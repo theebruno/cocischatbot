@@ -1,6 +1,6 @@
 {"intents":[
 		{"tag": "greeting",
-			"patterns": ["Hi", "Hello", "Sup", "What's good"],
+			"patterns": ["Hi", "Hello", "Sup", "Hey", "Hiya", "What's good"],
 			"responses": ["Hello", "What's good", "Hi there", "What's up"],
 			"context_set":""
 		},
@@ -20,7 +20,7 @@
 			"context_set":""
 		},
 		{"tag": "fail",
-			"patterns": ["you didn't answer my question", "that is not what i wanted", "that is not right", "that is not what i meant","you did not answer correctly"],
+			"patterns": ["you didn't answer my question", " ", "reashbvjvb fweijdnvidsjb uvdshb nddi dnsz aa kaijedn", "saancnaoj ocajonajc ichjbidnsbca ihcdabciha", "tdfgvijo lkogtkd uihjnoknl", "dskdvsb ed ffgsb ssdgge fsthb", "that is not what i wanted", "that is not right", "that is not what i meant","you did not answer correctly"],
 			"responses": ["I'm sorry, could you rephrase that question for me"],
 			"context_set":""
 		},
@@ -430,7 +430,7 @@
 		"context_set":""
 	    },
 		{"tag": "Custodian's office EASLIS",
-		"patterns": ["where is Custodian's office EASLIS", "How can i  find Custodian's office EASLIS", "Where can i find Custodian's office EASLIS", "Where is Custodian's office EASLIS"],
+		"patterns": ["where is Custodian's office EASLIS", "where is the custodian", "How can i  find Custodian's office EASLIS", "Where can i find Custodian's office EASLIS", "Where is Custodian's office EASLIS"],
 		"responses": ["Custodian's office EASLIS is found  in Block C in the level 1  first office as you enter the building"],
 		"context_set":""
 	    },
