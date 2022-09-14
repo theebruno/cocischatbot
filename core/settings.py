@@ -21,11 +21,14 @@ SECRET_KEY = config('SECRET_KEY', default='S#perS3crEt_1122')
 DEBUG = config('DEBUG', default=True, cast=bool)
 
 # load production server from .env
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'cocischatbott.herokuapp.com', config('SERVER', default='127.0.0.1')]
-# ALLOWED_HOSTS = ['cocischatbott.herokuapp.com', ]
+ALLOWED_HOSTS = [
+    'localhost', '127.0.0.1',
+    'cocisbot.herokuapp.com',
+    'cocischatbott.herokuapp.com',
+    config('SERVER', default='127.0.0.1')
+]
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -93,15 +96,15 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': 'db.sqlite3',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',
 
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd8lv71dun8h5cp',
-        'USER': 'iwbtfovuplxgml',
-        'PASSWORD': '580cb253032906bf4464817860f5a361a16718f216bd75af765b5346af44dda9',
-        'HOST': 'ec2-44-205-112-253.compute-1.amazonaws.com',
-        'PORT': 5432,
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        # 'NAME': 'd5bbc5vkquum1c',
+        # 'USER': 'aokhfqzjevwibx',
+        # 'PASSWORD': '51115f9044285fc8114e0f3940e9efe72ccba33a7ee1765663f3b3a86babd887',
+        # 'HOST': 'ec2-3-219-19-205.compute-1.amazonaws.com',
+        # 'PORT': 5432,
     }
 }
 
