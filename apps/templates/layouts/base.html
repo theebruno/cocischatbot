@@ -1,81 +1,63 @@
-<!--
-=========================================================
-* Material Dashboard 2 - v3.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://www.creative-tim.com/license)
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="/static/assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="/static/assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <link rel="canonical" href="https://appseed.us/admin-dashboards/django-dashboard-material">
+
   <title>
-    COCIS BOT | BSE22-16
+    CoCIS Chatbot Dashboard - {% block title %}{% endblock %} | Makerere University
   </title>
+
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
-  <!-- Nucleo Icons -->
-  <link href="/static/assets/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="/static/assets/css/nucleo-svg.css" rel="stylesheet" />
-  <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <!-- Material Icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
-  <link id="pagestyle" href="/static/assets/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
+  <link href="/static/assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="/static/assets/demo/demo.css" rel="stylesheet" />
 
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
-  
-
-
+  <!-- Specific Page CSS goes HERE  -->
   {% block stylesheets %}{% endblock stylesheets %}
 
-</head> 
-<body class="g-sidenav-show bg-gray-200">
-  
-  {% include 'includes/sidebar.html' %}
+</head>
 
-  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
-  
-    {% include 'includes/navigation.html' %}
+<body class="">
+  <div class="wrapper ">
+    {% if request.user.is_authenticated %}
+        {% include 'includes/sidebar.html' %}
+    {% endif %}
 
-    {% block content %}{% endblock content %}
+    <div class="main-panel">
 
-  </main>
+      {% include 'includes/navigation.html' %}
+
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="container-fluid">
+
+          {% block content %}{% endblock content %}
+
+        </div>
+      </div>
+
+      {% include 'includes/footer.html' %}
+
+    </div>
+  </div>
 
   {% include 'includes/fixed-plugin.html' %}
 
   {% include 'includes/scripts.html' %}
 
-  <!-- Specific Page JS goes HERE  -->
+  {% include 'includes/scripts-sidebar.html' %}
+  
+  {#  <!-- Specific Page JS goes HERE  -->#}
   {% block javascripts %}{% endblock javascripts %}
 
-  <script>
-    var win = navigator.platform.indexOf('Win') > -1;
-    if (win && document.querySelector('#sidenav-scrollbar')) {
-      var options = {
-        damping: '0.5'
-      }
-      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
-    }
-  </script>
-  <!-- Github buttons -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="/static/assets/js/material-dashboard.min.js?v=3.0.0"></script>
-  
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
-
-</body> 
+</body>
 </html>
