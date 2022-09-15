@@ -1,6 +1,8 @@
 """
 """
 import os
+# import django_heroku
+
 from decouple import config
 from unipath import Path
 
@@ -19,10 +21,14 @@ SECRET_KEY = config('SECRET_KEY', default='S#perS3crEt_1122')
 DEBUG = config('DEBUG', default=True, cast=bool)
 
 # load production server from .env
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', config('SERVER', default='127.0.0.1')]
+ALLOWED_HOSTS = [
+    'localhost', '127.0.0.1',
+    'cocisbot.herokuapp.com',
+    'cocischatbott.herokuapp.com',
+    config('SERVER', default='127.0.0.1')
+]
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -33,6 +39,7 @@ INSTALLED_APPS = [
 
     # 3rd party
     'thumbnails',
+    'whitenoise.runserver_nostatic',
 
 
     # MY APPS
@@ -91,8 +98,16 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'db.sqlite3',
+
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        # 'NAME': 'd5bbc5vkquum1c',
+        # 'USER': 'aokhfqzjevwibx',
+        # 'PASSWORD': '51115f9044285fc8114e0f3940e9efe72ccba33a7ee1765663f3b3a86babd887',
+        # 'HOST': 'ec2-3-219-19-205.compute-1.amazonaws.com',
+        # 'PORT': 5432,
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -139,6 +154,11 @@ STATICFILES_DIRS = (
     os.path.join(CORE_DIR, 'apps/static'),
 )
 
+# heroku
+# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
 # EMAIL_HOST = 'smtp.email-host-provider-domain.com'
 EMAIL_HOST = 'localhost'
 
@@ -182,3 +202,6 @@ LOGIN_EXEMPT_URLS = (  # urls a user can access while they are logged out
 )
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# # Activate Django heroku
+# django_heroku.settings(locals())
