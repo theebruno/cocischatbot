@@ -1,0 +1,64 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Login {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  <div class="row">
+    <div class="col-md-7 offset-1">
+      <div class="card">
+        <div class="card-header card-header-primary">
+          <h4 class="card-title">
+            Add a new Course here
+          </h4>
+        </div>
+        <div class="card-body">
+
+          <h6 class="card-category">
+              {% if msg %}
+                <span class="text-danger">{{ msg | safe }}</span>
+              {% else %}
+                  Both fields are required
+              {% endif %}  
+          </h6>
+          <br/>
+
+          <form role="form" method="post" action="">
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  {{ form.name }}
+                </div>
+              </div>
+            </div>
+            <br/>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="bmd-label-floating">Department</label>
+                    <span class="">{{ form.department }}</span>
+                </div>
+              </div>
+            </div>
+
+            <br />
+
+            <button type="submit" name="login" class="btn btn-primary pull-left">Save Course</button>
+
+            <div class="clearfix"></div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

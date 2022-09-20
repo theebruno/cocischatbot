@@ -1,0 +1,54 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Tables {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+        <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title" style="font-weight: 800;">
+                      Class Timetable at CoCIS
+                      <a href="#" type="" class="btn btn-success pull-right">
+                          Upload Timetable here
+                      </a>
+                  </h4>
+
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table">
+                      <tr class=" text-primary">
+                        <th>ENTRY</th>
+                        <th>COURSE NAME</th>
+                        <th>DEPARTMENT</th>
+                        <th>LAST UPDATED</th>
+                      </tr>
+
+                      <tbody>
+                            {% for course in object_list %}
+                        <tr>
+                          <td>#</td>
+                          <td>{{ course.name }}</td>
+                          <td>{{ course.department }}</td>
+                          <td>{{ course.updated }}</td>
+                        </tr>
+                            {% endfor %}
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

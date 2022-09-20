@@ -1,23 +1,21 @@
-
-
+{% if request.user.is_authenticated %}
     <footer class="footer">
         <div class="container-fluid">
           <nav class="float-left">
             <ul>
-
               <li>
-                <a target="_blank" rel="noopener noreferrer" 
-                   href="https://appseed.us/admin-dashboards/django-dashboard-material">
-                   Djang Material Dashboard
+                <a target="_blank" rel="noopener noreferrer"
+                   href="https://cocischatbott.herokuapp.com/">
+                   CoCIS Chatbot Web System
                 </a>
               </li>
 
             </ul>
           </nav>
           <div class="copyright float-right">
-            &copy; <a target="_blank" rel="noopener noreferrer" 
-                      href="https://bit.ly/3fKQZaL">Creative Tim</a> 
-                      - coded by <a target="_blank" rel="noopener noreferrer" href="https://appseed.us">AppSeed</a>
+            &copy; <a target="_blank" rel="noopener noreferrer" href="https://bse2216.wordpress.com/">cocischatbot</a>- coded by <a target="_blank" rel="noopener noreferrer" href="https://bse2216.wordpress.com/">Group BSE-2216</a>
           </div>
         </div>
     </footer>
+
+{% endif %}

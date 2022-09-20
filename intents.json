@@ -1,0 +1,449 @@
+{"intents":[
+		{"tag": "greeting",
+			"patterns": ["Hi", "Hello", "Sup", "Hey", "Hiya", "What's good"],
+			"responses": ["Hello", "What's good", "Hi there", "What's up"],
+			"context_set":""
+		},
+		{"tag": "ca va",
+			"patterns": ["How are you", "How is your day", "How are you feeling"],
+			"responses": ["Its a beautiful day, the breeze is stupendous and i am feeling rather good about myself"],
+			"context_set":""
+		},
+		{"tag": "name",
+			"patterns": ["What is your name", "what should i call you", "What are you", "What do they call you"],
+			"responses": ["I am Joi an Artificially Intelligent Chatbot created to aid visitors, personnel and students of Cocis"],
+			"context_set":""
+		},
+		{"tag": "creators",
+			"patterns": ["who is your maker", "who created you", "who made you", "who is your coder"],
+			"responses": ["I was created by a group of students by the names Lwanga Conrad Arthur, Mugire Bruno, Ntaryebwamukama Jedidiah and Tumukunde Benon"],
+			"context_set":""
+		},
+		{"tag": "fail",
+			"patterns": ["you didn't answer my question", " ", "reashbvjvb fweijdnvidsjb uvdshb nddi dnsz aa kaijedn", "saancnaoj ocajonajc ichjbidnsbca ihcdabciha", "tdfgvijo lkogtkd uihjnoknl", "dskdvsb ed ffgsb ssdgge fsthb", "that is not what i wanted", "that is not right", "that is not what i meant","you did not answer correctly"],
+			"responses": ["I'm sorry, could you rephrase that question for me"],
+			"context_set":""
+		},
+		{"tag": "closing",
+			"patterns": ["What time does the college close", "when do i leave"],
+			"responses": ["The college closes at 10 pm"],
+			"context_set":""
+		},
+		{"tag": "principal",
+			"patterns": ["Where do i find the principal", "is the principal around", "what time is the principal available", "On what level is the principle"],
+			"responses": ["The principal can be found in his office at level 4 of Block A Monday to Friday from 6:30am to 7:00pm"],
+			"context_set":""
+		},
+		{"tag": "dean",
+			"patterns": ["Where do i find the dean", "is the dean around", "what time is the dean available", "On what level is the dean"],
+			"responses": ["The dean can be found in his office on Level 4 of BLock A Monday to Friday"],
+			"context_set":""
+		},
+		{"tag": "amity",
+			"patterns": ["Where do i find Amity University", "is amity university here", "where is the indian university", "On what level is amity"],
+			"responses": ["Amity University is in the basement floor of Block A"],
+			"context_set":""
+		},
+		{"tag": "DICTS",
+			"patterns": ["Where do i find dicts", "is dicts here", "where is the directorate for ict support", "On what level is the directorate for ict support"],
+			"responses": ["DICTS/ Directorate for ICT Support is in the basement floor of Block A"],
+			"context_set":""
+		},
+		{"tag": "parking",
+			"patterns": ["Where do i park", "can i park here", "is it safe for me to leave my car here"],
+			"responses": ["You may park anywhere in the college except in the reserved parking spaces"],
+			"context_set":""
+		},
+		{"tag": "printery",
+			"patterns": ["Where is the printery", "How can i find the printery", "where do i print from", "where can i print"],
+			"responses": ["The Printeries can be found on the ground floor and 1st floor of Block B"],
+			"context_set":""
+		},
+		{"tag": "toilet",
+			"patterns": ["Where is the toilet", "Where are the lavatories", "where do i go to tinkle", "How can i find the toilet", "Where's the loo", "Where are the bathrooms","Where do i ease myself" ],
+			"responses": ["Find Student/visitor toilets on Block B - ground floor, 2nd and 4th levels.The rest of the levels have staff toilets."],
+			"context_set":""
+		},
+		{"tag": "help",
+			"patterns": ["What can you do", "How can i make use of you", "how can you help me",  "What should i ask", "How do i ask questions", "What kind of questions can i ask"],
+			"responses": ["I can help you with most queries you may have concerning the college. To ask a question simply type it into the text box below in the format Where is this resource... oh and try to spell things correctly am not yet that intelligent"],
+			"context_set":""
+		},
+		{"tag": "canteen",
+			"patterns": ["Where is the canteen", "where can i get something to eat", "where do i get a meal", "say where is me lunch", "How can i find the canteen", "Where can i get a bite to eat","Where can i buy lunch" ],
+			"responses": ["The canteen is located on the ground floor of Block B"],
+			"context_set":""
+		},
+		{"tag": "GIS Lab",
+			"patterns": ["Where is the GIS lab", "gis is where", "on which level is the gis lab", "How can i find the geography students", "Where can i find the meteorology department"],
+			"responses": ["The GIS Lab is located on the ground floor of Block A"],
+			"context_set":""
+		},
+		{"tag": "Procurements",
+			"patterns": ["Where is the procurements office", "where's procurements", "How can i find the accountant", "Where can i find the huawei samrt classroom","Where can i find procurements" ],
+			"responses": ["Level 2 of Block A has the Procurement and Accounts offices as well as a Huawei smart classroom"],
+			"context_set":""
+		},
+		{"tag": "information technology department",
+			"patterns": ["Where is the IT department", "How can i find the information technology department", "Where can i find the IT department"],
+			"responses": ["The Information Technology Department is found on Level 2 of Block A"],
+			"context_set":""
+		},
+		{"tag": "networks department",
+			"patterns": ["Where is the networks department", "How can i find the networks department", "Where can i find the information sciences department"],
+			"responses": ["Level 3 of Block A houses the Networks, Information Sciences and Computer Science Departments"],
+			"context_set":""
+		},
+		{"tag": "computer science department",
+			"patterns": ["Where is the CS department", "How can i find the computer science department", "Where can i find the computer science department"],
+			"responses": ["Level 3 of block A to the right of the washrooms"],
+			"context_set":""
+		},
+		{"tag": "Heads of department",
+			"patterns": ["Where are the heads of department", "How can i find the hods", "Where can i find the heads of department"],
+			"responses": ["They can be found on level 4 of Block A"],
+			"context_set":""
+		},
+		{"tag": "Boardroom",
+			"patterns": ["Where is the boardroom", "How can i find the boardroom", "Where can i find the boardroom"],
+			"responses": ["The boardroom can be found on Level 4 of Block A"],
+			"context_set":""
+		},
+		{"tag": "Records",
+			"patterns": ["Where is the records office", "How can i find the records department", "Where can i find records"],
+			"responses": ["The records office can be found on Level 4 of Block A"],
+			"context_set":""
+		},
+		{"tag": "Grants",
+			"patterns": ["Where is the grants office", "How can i find the grants department", "Where can i find hr", "how do i get to the human resource office", "Where is the store","At what level is the store"],
+			"responses": ["Level 5 of Block A is where you can find the Grants Office, Human Resource Office and the store"],
+			"context_set":""
+		},
+		{"tag": "Pearson",
+			"patterns": ["Where is the Pearson gmat east african centre for US International certfications", "where is pearson", "where is gmat", "How can i get my Pearson certificate", "Where can i find the certfications office","Where do i pick my US certificate"],
+			"responses": ["The Pearson GMAT East African center for US international certifications can be found on level 6 of Block A"],
+			"context_set":""
+		},
+		{"tag": "library",
+			"patterns": ["Where is the library", "How can i find the library", "Where can i find the library"],
+			"responses": ["The College library is on the first floor of Block B"],
+			"context_set":""
+		},
+		{"tag": "LLB",
+			"patterns": ["Where is the llb1", "where is llb1", "where is llb2", "How can i find LLB2", "Where can i find LLB3", "on which level is LLB4", "How do i get to LLB5", "Where is LLB6 located"],
+			"responses": ["The lecture theatres are on the level that corresponds to the last numberin their names e.g LLB1 on level 1 LLB2 on level 2 etc."],
+			"context_set":""
+		},
+		{"tag": "labs",
+			"patterns": ["Where is the computer lab", "How can i find the computer lab", "Where can i find the computer lab", "on which level is the computer lab", "How do i get to the lab", "Where is the comp lab located"],
+			"responses": ["The Computer Labs are found on Level 2 of Block B"],
+			"context_set":""
+		},
+		{"tag": "bag section",
+			"patterns": ["Where is the bag section", "How can i find the bag section", "Where can i keep my bag", "on which level is the bag keeping place", "How do i get to the bag section", "Where is the bag section located"],
+			"responses": ["The bag section is on level 3 of Block B in the right hand corner opposite the WIMEA labs"],
+			"context_set":""
+		},
+		{"tag": "Seminar room",
+			"patterns": ["Where is the seminar room", "How can i find the seminar room", "Where can i find the phd students", "Where can i find the workshop", "Where is the workshop"],
+			"responses": ["There is a seminar and conference room on Level 3 of Block A"],
+			"context_set":""
+		},
+		{"tag": "video conference",
+			"patterns": ["Where is the video conference facility", "How can i find the video conference room", "Where can i find the room for video conferencing", "Where can i find the video conference room", "Where is the video conference"],
+			"responses": ["The Video Conferencing Facility  is located on level 3 of Block B"],
+			"context_set":""
+		},
+		{"tag": "graduate research office",
+			"patterns": ["Where is the graduate research office", "How can i find the graduate office", "Where can i find the room for graduate research", "Where can i find the grad room", "Where is the graduates place"],
+			"responses": ["The Graduate Research Office is located on level 3 of Block B"],
+			"context_set":""
+		},
+		{"tag": "wimea",
+			"patterns": ["Where is the wimea lab", "How can i find the wimea lab", "Where can i find the room for weather research", "Where can i find wimea"],
+			"responses": ["The WIMEA ICT lab is located on level 3 of Block B opposite the bag section"],
+			"context_set":""
+		},
+		{"tag": "Geospatial data and Computational Intelligence Lab",
+			"patterns": ["Where is the Geospatial data and Computational Intelligence Lab", "How can i find the geospatial lab", "Where can i find the room for computational intelligence", "Where is geospatial data room located"],
+			"responses": ["The Geospatial data and Computational Intelligence Lab is located on level 3 of Block B"],
+			"context_set":""
+		},
+		{"tag": "Revenue Office",
+			"patterns": ["Where is the revenue office", "How can i find the revenue office", "Where can i find the room for revenue", "Where can i find revenue"],
+			"responses": ["Level 3 of Block B has the Revenue Office"],
+			"context_set":""
+		},
+		{"tag": "College Registrar",
+			"patterns": ["Where is the registrar", "How can i find the college registrar", "Where can i find the room for the college's registrar", "Where can i find registrar's office"],
+			"responses": ["Level 3 of Block B has the College Registrar"],
+			"context_set":""
+		},
+		{"tag": "Software Systems Centre",
+			"patterns": ["Where is the Software systems center", "How can i find the software systems centre", "Where can i find the room for software systems", "Where can i find ssc"],
+			"responses": ["Level 3 of Block B has the Software Systems Centre"],
+			"context_set":""
+		},
+		{"tag": "AirQo",
+			"patterns": ["Where are the  AirQo offices", "How can i find the AirQo office", "Where can i find the room for AirQo", "where is airqo","Where can i find AirQo"],
+			"responses": ["AirQo is on Level 3 of Block B"],
+			"context_set":""
+		},
+		{"tag": "hitrain",
+			"patterns": ["Where are the  Hitrain offices", "How can i find the hitrain lab", "Where can i find the room for hitrain", "Where can i find hitrain"],
+			"responses": ["Level 3 of Block B has the Hi-Train Lab"],
+			"context_set":""
+		},
+		{"tag": "student lockers",
+			"patterns": ["Where are the student lockers", "How can i find the student lockers", "Where can i find the place where the student lockers are", "Where can i find lockers for students"],
+			"responses": ["Level 3 of Block B has the student lockers"],
+			"context_set":""
+		},
+		{"tag": "student leaders",
+			"patterns": ["Where are the student leaders", "How can i find the student leaders", "Where can i find the room for student leaders", "Where can i find leaders for students"],
+			"responses": ["The student leaders can be found on level 3 of block B"],
+			"context_set":""
+		},
+		{"tag": "small lab",
+			"patterns": ["Where is the small computer lab", "How can i find the small lab", "Where can i find the small room for computers", "Where can i find the small lab for computers"],
+			"responses": ["The small computer lab can be found on level 4 of Block B"],
+			"context_set":""
+		},
+		{"tag": "big lab",
+			"patterns": ["Where is the big computer lab", "How can i find the big lab", "Where can i find the big room for computers", "Where can i find the big lab for computers"],
+			"responses": ["Level 4 of Block B has the Big Copmuter Lab"],
+			"context_set":""
+		},
+		{"tag": "center for innovation and professional skills development",
+			"patterns": ["Where is the center for innovation and professional skills development", "How can i find the centre for innovation and professional skills development", "Where can i find the center for innovation and professional skills development", "Where can i find the centre for innovation and professional skills development"],
+			"responses": ["Level 5 of Block B has the Centre for innovation and professional skills development"],
+			"context_set":""
+		},
+		{"tag": "innovation and incubation center",
+			"patterns": ["Where is the innovation and incubation centre", "How can i find the innovation and incubation center", "Where can i find the innovation and incubation centre", "Where is the innovation and incubation center located"],
+			"responses": ["Level 5 of Block B has the Innovation and Incubation Centre"],
+			"context_set":""
+		},
+		{"tag": "Department of ICT and support services",
+			"patterns": ["Where is the Department of ICT and support services", "How can i find the Department of ICT and support services", "Where can i find the Department of ICT and support services", "Where is the Department of ICT and support services located"],
+			"responses": ["The Department of ICT Support and Services Office can be found on Level 6 of Block B"],
+			"context_set":""
+		},
+		{"tag": "AI lab",
+			"patterns": ["Where is the AI lab", "How can i find the Artificial Intelligence lab", "Where can i find the AI lab", "Where is the Artificial Intelligence lab located"],
+			"responses": ["The AI Lab is on the sixth Level of Block B"],
+			"context_set":""
+		},
+		{"tag": "big analytics lab",
+			"patterns": ["Where is the big analytics lab", "How can i find the big analytics lab", "Where can i find the big analytics lab", "Where is the big analytics lab located"],
+			"responses": ["The Big Analytics Lab is on Level 6 of Block B"],
+			"context_set":""
+		},
+		{"tag": "big analytics lab",
+			"patterns": ["Where is the big analytics lab", "How can i find the big analytics lab", "Where can i find the big analytics lab", "Where is the big analytics lab located"],
+			"responses": ["The Big Analytics Lab is on Level 6 of Block B"],
+			"context_set":""
+		},
+		{"tag": "outreach and community engagement office",
+			"patterns": ["Where is the outreach and community engagement office", "How can i find the outreach office", "Where can i find the community engagement office", "Where is the outreach and community engagement office located"],
+			"responses": ["Level 6 of Block B has the Outreach and Community Engagement Office"],
+			"context_set":""
+		},
+		{"tag": "Dr. Ntanda Moses",
+			"patterns": ["Where is Dr. Ntanda Moses' office", "How can i find Dr. Ntanda", "Where can i find Ntanda Moses", "Where is Moses Ntanda"],
+			"responses": ["When Dr. Ntanda is not lecturing he can be found in his office in Block A level 3 in the networks department"],
+			"context_set":""
+		},
+		{"tag": "Dr. Nsabagwa Mary",
+			"patterns": ["Where is Dr. Nsabagwa Mary's office", "How can i find Dr. Nsabagwa", "Where can i find Nsabagwa Mary", "Where is mary Nsabagwa"],
+			"responses": ["When Dr. Nsabagwa is not lecturing she can be found in WIMEA labs in Block B on Level 3"],
+			"context_set":""
+		},
+		{"tag": "Geospatial Data & Computational Intelligence Lab",
+			"patterns": ["where is Geospatial Data & Computational Intelligence Lab", "How can i find Geospatial Data & Computational Intelligence Lab", "Where can i find Geospatial Data & Computational Intelligence Lab", "Where is Geospatial Data & Computational Intelligence Lab"],
+			"responses": [" Geospatial Data & Computational Intelligence Lab is found  in Block B on Level 3 opposite student leaders office"],
+			"context_set":""
+		},
+		{"tag": "Phd office",
+			"patterns": ["where is Phd office", "How can i  find Phd office", "Where can i find Phd office", "Where is Phd office"],
+			"responses": [" GPhd office is found  in Block B on Level 3 opposite student leaders office"],
+			"context_set":""
+		},
+		{"tag": "School Registrars Office",
+		"patterns": ["where is School Registrars Office", "How can i  find School Registrars Office", "Where can i find School Registrars Office", "Where is School Registrars Office"],
+		"responses": [" School Registrars Office is found  in Block C on Level 1 room F-1"],
+		"context_set":""
+	    },
+		{"tag": "Ladies staff toilets",
+		"patterns": ["where is Ladies staff toilet", "How can i  find Ladies staff toilet", "Where can i find Ladies staff toilet", "Where is Ladies staff toilet"],
+		"responses": [" Ladies staff toilet is found  in Block C on Level 1 near  room F-1"],
+		"context_set":""
+	    },
+		{"tag": "HOD-Library AND Information Science",
+		"patterns": ["where is HOD-Library AND Information Science", "How can i  find HOD-Library AND Information Science", "Where can i find HOD-Library AND Information Science", "Where is HOD-Library AND Information Science"],
+		"responses": [" HOD-Library AND Information Science is found  in Block C on Level 1 after  room F-1"],
+		"context_set":""
+	    },
+		{"tag": "Coordinator for Research and Graduate Training",
+		"patterns": ["where is Coordinator for Research and Graduate Training", "How can i  find Coordinator for Research and Graduate Training", "Where can i find Coordinator for Research and Graduate Training", "Where is Coordinator for Research and Graduate Training"],
+		"responses": [" Coordinator for Research and Graduate Training is found  in Block C on Level 1 after  HOD-Library AND Information Science"],
+		"context_set":""
+	    },
+		{"tag": "Professor ELISAM MAGARA",
+		"patterns": ["where is Professor ELISAM MAGARA", "How can i  find Professor ELISAM MAGARA", "Where can i find Professor ELISAM MAGARA", "Where is Professor ELISAM MAGARA"],
+		"responses": [" Professor ELISAM MAGARA is found  in Block C on Level 1  in Department of Records & Archieves Management F-2 first office"],
+		"context_set":""
+	    },
+		{"tag": "Dr.CLEMENT LUTAAYA",
+		"patterns": ["where is Dr.CLEMENT LUTAAYA", "How can i  find Dr.CLEMENT LUTAAYA", "Where can i find Dr.CLEMENT LUTAAYA", "Where is Dr.CLEMENT LUTAAYA"],
+		"responses": [" Dr.CLEMENT LUTAAYA is found  in Block C on Level 1 in  Department of Library & Information Sciences F-2 second  office"],
+		"context_set":""
+	    },
+		{"tag": "MS.SYLVIA NAMUSUZI",
+		"patterns": ["where is MS.SYLVIA NAMUSUZI", "How can i  find MS.SYLVIA NAMUSUZI", "Where can i find MS.SYLVIA NAMUSUZI", "Where is MS.SYLVIA NAMUSUZI"],
+		"responses": [" MS.SYLVIA NAMUSUZI is found  in Block C on Level 1 in  Department of Records & Archieves Management F-2 second  office"],
+		"context_set":""
+	    },
+		{"tag": "Lecture room1",
+		"patterns": ["where is Lecture room1", "How can i  find Lecture room1", "Where can i find Lecture room1", "Where is Lecture room1"],
+		"responses": ["Lecture room1 is found  in Block C on Level 1 "],
+		"context_set":""
+	    },
+		{"tag": "Dr.NALUMANSI",
+		"patterns": ["where is Dr.NALUMANSI", "How can i  find Dr.NALUMANSI", "Where can i find Dr.NALUMANSI", "Where is Dr.NALUMANSI"],
+		"responses": ["Dr.NALUMANSI is found  in Block C on Level 1  F-3 when she is not lecturing"],
+		"context_set":""
+	    },
+		{"tag": "Dr.NALUMANSI",
+		"patterns": ["where is Dr.NALUMANSI", "How can i  find Dr.NALUMANSI", "Where can i find Dr.NALUMANSI", "Where is Dr.NALUMANSI"],
+		"responses": ["Dr.NALUMANSI is found  in Block C on Level 1  F-3 when she is not lecturing"],
+		"context_set":""
+	    },
+		{"tag": "Associate Professor Dr.David Luyombya",
+		"patterns": ["where is Associate Professor Dr.David Luyombya", "How can i  find Associate Professor Dr.David Luyombya", "Where can i find Associate Professor Dr.David Luyombya", "Where is Associate Professor Dr.David Luyombya"],
+		"responses": ["Associate Professor Dr.David Luyombya is found  in Block C on Level 1  in the HOD Records and archives Management office"],
+		"context_set":""
+	    },
+		{"tag": "Gent's staff toilets",
+		"patterns": ["where is Gent's staff toilets", "How can i  find Gent's staff toilets", "Where can i find Gent's staff toilets", "Where is Gent's staff toilets"],
+		"responses": [" Gent's staff toilets is found  in Block C on Level 1 first floor"],
+		"context_set":""
+	    },
+		{"tag": "Graduate Board Room",
+		"patterns": ["where is Graduate Board Room", "How can i  find Graduate Board Room", "Where can i find Graduate Board Room", "Where is Graduate Board Room"],
+		"responses": [" Graduate Board Room is found  in Block C on Level 2 near Graduate Board Room "],
+		"context_set":""
+	    },
+		{"tag": "Library Administrator",
+		"patterns": ["where is Library Administrator", "How can i  find Library Administrator", "Where can i find Library Administrator", "Where is Library Administrator"],
+		"responses": ["Library Administrator is found  in Block C on Level 2  first office in the school library"],
+		"context_set":""
+	    },
+		{"tag": "School Library",
+		"patterns": ["where is School Library", "How can i  find School Library", "Where can i find School Library", "Where is School Library"],
+		"responses": ["School Library is found  in Block C on Level 2"],
+		"context_set":""
+	    },
+		{"tag": "School Library",
+		"patterns": ["where is School Library", "How can i  find School Library", "Where can i find School Library", "Where is School Library"],
+		"responses": ["School Library is found  in Block C on Level 2"],
+		"context_set":""
+	    },
+		{"tag": "Dean EASLIS",
+		"patterns": ["where is Dean EASLIS", "How can i  find Dean EASLIS", "Where can i find Dean EASLIS", "Where is Dean EASLIS"],
+		"responses": ["Dean  of EASLIS is found  in Block C on Level 2   room F-6 "],
+		"context_set":""
+	    },
+		{"tag": "Administrative Assistant",
+		"patterns": ["where is Administrative Assistant", "How can i  find Administrative Assistant", "Where can i find Administrative Assistant", "Where is Administrative Assistant"],
+		"responses": ["Administrative Assistant is found  in Block C on Level 2   room F-6 "],
+		"context_set":""
+	    },
+		{"tag": "Registrary",
+		"patterns": ["where is Registrary", "How can i  find Registrary", "Where can i find Registrary", "Where is Registrary"],
+		"responses": ["Registrary is found  in Block C on Level 2    near room F-6 "],
+		"context_set":""
+	    },
+		{"tag": "Examination Coordinator",
+		"patterns": ["where is Examination Coordinator", "How can i  find Examination Coordinator", "Where can i find Examination Coordinator", "Where is Examination Coordinator"],
+		"responses": ["Examination Coordinator is found  in Block C on Level 2    room F-4 "],
+		"context_set":""
+	    },
+		{"tag": "Projects Office",
+		"patterns": ["where is Projects Office", "How can i  find Projects Office", "Where can i find Projects Office", "Where is Projects Office"],
+		"responses": ["Projects Office is found  in Block C on Level 2    room F-5"],
+		"context_set":""
+	    },
+		{"tag": "Seminar room EASLIS",
+		"patterns": ["where is Seminar room EASLIS", "How can i  find Seminar room EASLIS", "Where can i find Seminar room EASLIS", "Where is Seminar room EASLIS"],
+		"responses": ["Seminar room EASLIS is found  in Block C on Level 2   near  room F-5"],
+		"context_set":""
+	    },
+		{"tag": "Lecture room IV",
+		"patterns": ["where is Lecture room IV", "How can i  find Lecture room IV", "Where can i find Lecture room IV", "Where is Lecture room IV"],
+		"responses": ["Lecture room IV is found  in Block C in the basement (ground floor)"],
+		"context_set":""
+	    },
+		{"tag": "Store",
+		"patterns": ["where is Store", "How can i  find Store", "Where can i find Store", "Where is Store"],
+		"responses": ["Store is found  in Block C in the basement (ground floor) "],
+		"context_set":""
+	    },
+		{"tag": "Mulissa Office",
+		"patterns": ["where is Mulissa Office", "where is mulissa", "How can i  find Mulissa Office", "Where can i find Mulissa Office", "Where is Mulissa Office"],
+		"responses": ["Mulissa Office is found  in Block C in the basement (ground floor) first office after the steps"],
+		"context_set":""
+	    },
+		{"tag": "Student Toilets",
+		"patterns": ["where is Student Toilets", "How can i  find Student Toilets", "Where can i find Student Toilets", "Where is Student Toilets"],
+		"responses": ["Student Toilets is found  in Block C in the basement (ground floor)"],
+		"context_set":""
+	    },
+		{"tag": "KIDAAGA JOSHUA JUSTIN",
+		"patterns": ["where is KIDAAGA JOSHUA JUSTIN", "How can i  find KIDAAGA JOSHUA JUSTIN", "Where can i find KIDAAGA JOSHUA JUSTIN", "Where is KIDAAGA JOSHUA JUSTIN"],
+		"responses": ["KIDAAGA JOSHUA JUSTIN is found  in Block C in the basement (ground floor) in room G-3"],
+		"context_set":""
+	    },
+		{"tag": "MS.MUZAKI FARIDAH",
+		"patterns": ["where is MS.MUZAKI FARIDAH", "where is muzaki faridah", "How can i  find MS.MUZAKI FARIDAH", "Where can i find MS.MUZAKI FARIDAH", "Where is MS.MUZAKI FARIDAH"],
+		"responses": ["MS.MUZAKI FARIDAH is found  in Block C in the basement (ground floor) in room  G-3"],
+		"context_set":""
+	    },
+		{"tag": "FRANCIS EKWARO",
+		"patterns": ["where is FRANCIS EKWARO", "How can i  find FRANCIS EKWARO", "Where can i find FRANCIS EKWARO", "Where is FRANCIS EKWARO"],
+		"responses": ["FRANCIS EKWARO is found  in Block C in the basement (ground floor) in Department of Records & Archieves management room G-2"],
+		"context_set":""
+	    },
+		{"tag": "NANKYA",
+		"patterns": ["where is nankya", "How can i  find NANKYA", "Where can i find NANKYA", "Where is NANKYA"],
+		"responses": ["NANKYA is found  in Block C in the basement (ground floor) in room G-1"],
+		"context_set":""
+	    },
+		{"tag": "Computer lab",
+		"patterns": ["where is Computer lab", "How can i  find Computer lab", "Where can i find Computer lab", "Where is Computer lab"],
+		"responses": ["Computer lab is found  in Block C in the basement (ground floor) near room G-1"],
+		"context_set":""
+	    },
+		{"tag": "Systems Administration",
+		"patterns": ["where is Systems Administration", "How can i  find Systems Administration", "Where can i find Systems Administration", "Where is Systems Administration"],
+		"responses": ["Systems Administration is found  in Block C in the basement (ground floor) near Computer lab"],
+		"context_set":""
+	    },
+		{"tag": "Custodian's office EASLIS",
+		"patterns": ["where is Custodian's office EASLIS", "where is the custodian", "How can i  find Custodian's office EASLIS", "Where can i find Custodian's office EASLIS", "Where is Custodian's office EASLIS"],
+		"responses": ["Custodian's office EASLIS is found  in Block C in the level 1  first office as you enter the building"],
+		"context_set":""
+	    },
+		{"tag": "joke",
+	        "patterns": ["tell me a joke?", "make me laugh", "say something funny" ],
+	        "responses": ["How do you make holy water? you boil the hell out of it","what kind of bees make milk instead of honey?Boobies"],
+		 	"context_set": ""
+		},
+		
+		{"tag": "bye",
+			"patterns": ["see you", "goodbye", "later", "sayonara"],
+			"responses": ["bye", "see you", "goodbye"],
+			"context_set":""
+		}
+	]
+}

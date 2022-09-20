@@ -1,11 +1,14 @@
-# -*- encoding: utf-8 -*-
 """
-Copyright (c) 2019 - present AppSeed.us
 """
-
 import os
+# import django_heroku
+
 from decouple import config
 from unipath import Path
+
+# from django.core.urlresolvers import reverse_lazy
+
+from django.shortcuts import redirect, reverse
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = Path(__file__).parent
@@ -18,10 +21,14 @@ SECRET_KEY = config('SECRET_KEY', default='S#perS3crEt_1122')
 DEBUG = config('DEBUG', default=True, cast=bool)
 
 # load production server from .env
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', config('SERVER', default='127.0.0.1')]
+ALLOWED_HOSTS = [
+    'localhost', '127.0.0.1',
+    'cocisbot.herokuapp.com',
+    'cocischatbott.herokuapp.com',
+    config('SERVER', default='127.0.0.1')
+]
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -29,7 +36,22 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.home'  # Enable the inner home (home)
+
+    # 3rd party
+    'thumbnails',
+    'whitenoise.runserver_nostatic',
+
+
+    # MY APPS
+    'apps.accounts',
+    'apps.profiles',
+    'apps.home',
+    'apps.courses',
+    'apps.lecturer_offices',
+    'apps.departments',
+    'apps.course_units',
+    'apps.class_timetables',
+    'apps.exam_timetables',
 ]
 
 MIDDLEWARE = [
@@ -44,8 +66,11 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'core.urls'
+
 LOGIN_REDIRECT_URL = "home"  # Route defined in home/urls.py
+
 LOGOUT_REDIRECT_URL = "home"  # Route defined in home/urls.py
+
 TEMPLATE_DIR = os.path.join(CORE_DIR, "apps/templates")  # ROOT dir for templates
 
 TEMPLATES = [
@@ -73,8 +98,16 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'db.sqlite3',
+
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        # 'NAME': 'd5bbc5vkquum1c',
+        # 'USER': 'aokhfqzjevwibx',
+        # 'PASSWORD': '51115f9044285fc8114e0f3940e9efe72ccba33a7ee1765663f3b3a86babd887',
+        # 'HOST': 'ec2-3-219-19-205.compute-1.amazonaws.com',
+        # 'PORT': 5432,
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -99,7 +132,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+# TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Kampala'
 
 USE_I18N = True
 
@@ -120,6 +154,54 @@ STATICFILES_DIRS = (
     os.path.join(CORE_DIR, 'apps/static'),
 )
 
+# heroku
+# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-#############################################################
-#############################################################
+
+# EMAIL_HOST = 'smtp.email-host-provider-domain.com'
+EMAIL_HOST = 'localhost'
+
+# EMAIL_HOST_USER = 'yourusername@youremail.com'
+
+# EMAIL_HOST_PASSWORD = 'your password'
+
+EMAIL_PORT = 1025
+
+# EMAIL_USE_TLS = True
+
+# DEFAULT_FROM_EMAIL = 'theyuserteam@internet.com'
+
+# ADMINS = (
+#     ('You', 'you@email.com'),
+# )
+
+# MANAGERS = ADMINS
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+# For Bootstrap 3, change error alert to 'danger'
+
+from django.contrib import messages
+
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}
+
+# # Authentication Settings
+# AUTH_USER_MODEL = 'authtools.User'
+
+LOGIN_URL = "login"
+
+# LOGIN_URL = reverse("accounts:login")
+
+THUMBNAIL_EXTENSION = 'png'  # Or any extn for your thumbnails
+
+LOGIN_EXEMPT_URLS = (  # urls a user can access while they are logged out
+    'account/signup/',
+)
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# # Activate Django heroku
+# django_heroku.settings(locals())
