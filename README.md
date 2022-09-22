@@ -1,11 +1,12 @@
 
 # COCIS CHAT BOT
 
-## FLASK BASED ENGINE
+## DJANGO BASED ENGINE
+## FLUTTER BASED MOBILE APP
 
 Blog live at https://bse2216.wordpress.com/
 
-API URL : https://cocisbot.herokuapp.com/
+API URL : https://cocischatbott.herokuapp.com/
 
 ## What is a ChatBot?
 
@@ -26,37 +27,26 @@ These instructions will get you a copy of the project up and running on your loc
 https://github.com/theebruno/cocischatbot.git
 ```
 
-- Open the terminal/cmd and navigate to the project folder.
+- Open the terminal/cmd and navigate to the project folder respective folders like.
 
 ```bash
 cd cocischatbot
 ```
+```bash
+cd web
+```
+- then set up a django app in the typical way
+https://docs.djangoproject.com/en/4.1/topics/install/
 
-- Install the requirments.txt using
+
+
+- or to run the flutter app
 
 ```bash
-pip install requirments.txt
+cd cocischatbot
 ```
-
-- Requirments.txt will install all the required dependancies.
-
-### Usage
-
-- Now run the `run.py` using
-
 ```bash
-python app.py
+cd mobile app
 ```
-
-Congrats! The flask engine should now be running on <http://localhost:5000>
-
-
-
-### Preview
-
-
-
-## How do I deploy this to a web server?
-
-If you do not have a dedicated server, we highly recommend using PythonAnywhere, AWS or Heroku (used)to host your application.
-
+- then set up a flutter app in the typical way
+https://docs.flutter.dev/get-started/install

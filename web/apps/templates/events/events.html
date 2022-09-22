@@ -1,0 +1,103 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Login {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% load widget_tweaks %}
+
+
+{% block content %}
+
+  <div class="row">
+    <div class="col-md-7 offset-1">
+      <div class="card">
+        <div class="card-header card-header-primary">
+          <h4 class="card-title">
+            Add a new Event here
+          </h4>
+        </div>
+        <div class="card-body">
+
+          <h6 class="card-category">
+              {% if msg %}
+                <span class="text-danger">{{ msg | safe }}</span>
+              {% else %}
+                  All fields are required
+              {% endif %}  
+          </h6>
+          <br/>
+
+          <form role="form" method="post" action="">
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="bmd-label-floating">Name</label>
+                  {{ form.name }}
+                </div>
+              </div>
+            </div>
+            <br/>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="bmd-label-floating">Location</label>
+                    <span class="">{{ form.location }}</span>
+                </div>
+              </div>
+            </div>
+
+{#            <div class="row">#}
+{#              <div class="col-md-12">#}
+{#                <div class="form-group">#}
+{#                  <label class="bmd-label-floating">Event Date</label>#}
+{#                    <span class="">{{ form.event_date }}</span>#}
+{#                </div>#}
+{#              </div>#}
+{#            </div>#}
+
+
+
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="bmd-label-floating">Organiser</label>
+                    <span class="">{{ form.organiser }}</span>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="bmd-label-floating">Event Date</label>
+                    <span class="">{{ form.event_date }}</span>
+                </div>
+              </div>
+            </div>
+
+
+            <br />
+
+            <button type="submit" name="login" class="btn btn-primary pull-left">Save Event</button>
+
+            <div class="clearfix"></div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+{% endblock javascripts %}

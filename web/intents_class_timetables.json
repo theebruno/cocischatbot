@@ -1,0 +1,11 @@
+[
+  {
+    'id': 1,
+    'name': 'Software Engineering',
+    'department_id': 2,
+    'timestamp': datetime.datetime(2022, 9, 14, 21, 45, 15, 455695, tzinfo=<UTC>),
+    'updated': datetime.datetime(2022, 9, 14, 21, 45, 15, 455712, tzinfo=<UTC>)
+  },
+  {
+    'id': 2,
+    'name': 'Computer Science', 'department_id': 1, 'timestamp': datetime.datetime(2022, 9, 14, 21, 45, 30, 549478, tzinfo=<UTC>), 'updated': datetime.datetime(2022, 9, 14, 21, 45, 30, 549497, tzinfo=<UTC>)}]
